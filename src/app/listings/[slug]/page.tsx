@@ -59,7 +59,7 @@ export default async function ListingPage({
           ) : (
             <SceneArt scene={listing.scene} animated className="absolute inset-0" />
           )}
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/10 to-ink/85" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/40 via-ink/0 to-ink/95" />
           <div className="grain absolute inset-0" />
         </div>
 
