@@ -1,0 +1,9 @@
+# Netlify deploy configuration for the Ranch Land Group site.
+# Netlify auto-detects Next.js and provisions the runtime; this file
+# just pins the essentials so imports never need manual settings.
+
+[build]
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
