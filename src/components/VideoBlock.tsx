@@ -20,6 +20,7 @@ export default function VideoBlock({
 }) {
   const [available, setAvailable] = useState(false);
   const [playing, setPlaying] = useState(false);
+  const [portrait, setPortrait] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const toggle = () => {
@@ -59,10 +60,15 @@ export default function VideoBlock({
         <video
           ref={videoRef}
           src={src}
-          className={`absolute inset-0 h-full w-full object-cover ${available ? "" : "hidden"}`}
+          className={`absolute inset-0 h-full w-full ${portrait ? "object-contain" : "object-cover"} ${available ? "" : "hidden"}`}
           playsInline
           preload="metadata"
-          onCanPlay={() => setAvailable(true)}
+          onCanPlay={(e) => {
+            const v = e.currentTarget;
+            // Vertical (phone-format) films pillarbox instead of cropping.
+            setPortrait(v.videoHeight > v.videoWidth);
+            setAvailable(true);
+          }}
           onEnded={() => setPlaying(false)}
           onClick={toggle}
         />
