@@ -59,6 +59,16 @@ export const listings: Listing[] = [
     featured: true,
     scene: "highdesert",
     video: "/media/listings/zapata-tx-ranch.mp4",
+    photos: [
+      "/media/listings/zapata/zapata-01.jpg",
+      "/media/listings/zapata/zapata-02.jpg",
+      "/media/listings/zapata/zapata-03.jpg",
+      "/media/listings/zapata/zapata-04.jpg",
+      "/media/listings/zapata/zapata-05.jpg",
+      "/media/listings/zapata/zapata-06.jpg",
+      "/media/listings/zapata/zapata-07.jpg",
+      "/media/listings/zapata/zapata-08.jpg",
+    ],
     headline:
       "586± low-fence acres in the heart of the South Texas Golden Triangle — turnkey whitetail country 30 minutes from Laredo.",
     description: [

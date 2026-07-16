@@ -198,6 +198,41 @@ export default async function ListingPage({
         </Reveal>
       </section>
 
+      {/* ── Photo gallery ────────────────────────────────── */}
+      {listing.photos && listing.photos.length > 1 && (
+        <section className="mx-auto max-w-7xl px-5 pb-20 md:px-8">
+          <Reveal className="mb-10">
+            <p className="eyebrow text-saddle">Gallery</p>
+            <h2 className="mt-4 font-display text-3xl md:text-4xl">
+              The Land in Pictures
+            </h2>
+          </Reveal>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {listing.photos.slice(1).map((photo, i) => (
+              <Reveal key={photo} delay={(i % 3) * 100}>
+                <a
+                  href={photo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block overflow-hidden bg-cream shadow-[0_2px_20px_rgba(36,27,18,0.1)]"
+                  aria-label={`View photo ${i + 2} of ${listing.name} full size`}
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={photo}
+                      alt={`${listing.name} — photo ${i + 2}`}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-[1.06]"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    />
+                  </div>
+                </a>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* ── More ranches ─────────────────────────────────── */}
       <section className="bg-sand/60 py-20">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
