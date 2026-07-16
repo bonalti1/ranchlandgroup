@@ -122,6 +122,37 @@ export default function CartProvider({ children }: { children: ReactNode }) {
 
 function CartDrawer() {
   const { lines, total, remove, setQty, drawerOpen, setDrawerOpen } = useCart();
+  const [checkingOut, setCheckingOut] = useState(false);
+  const [checkoutError, setCheckoutError] = useState("");
+
+  // Stripe checkout is offered once every cart item has a price ID.
+  const stripeReady =
+    lines.length > 0 &&
+    lines.every(
+      (l) => products.find((p) => p.id === l.productId)?.stripePriceId,
+    );
+
+  const stripeCheckout = async () => {
+    setCheckingOut(true);
+    setCheckoutError("");
+    try {
+      const res = await fetch("/api/checkout", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ lines }),
+      });
+      const data = await res.json();
+      if (!res.ok || !data.url) {
+        throw new Error(data.error || "Checkout failed.");
+      }
+      window.location.href = data.url;
+    } catch (err) {
+      setCheckoutError(
+        err instanceof Error ? err.message : "Checkout failed. Try again.",
+      );
+      setCheckingOut(false);
+    }
+  };
 
   const orderEmail = () => {
     const body = lines
@@ -220,16 +251,44 @@ function CartDrawer() {
               <span className="eyebrow">Total</span>
               <span className="font-display text-xl">{formatUsd(total)}</span>
             </div>
-            <button
-              onClick={orderEmail}
-              className="block w-full cursor-pointer bg-saddle px-6 py-4 text-center font-display text-sm tracking-[0.25em] text-cream uppercase transition-colors hover:bg-bark"
-            >
-              Place Order by Email
-            </button>
-            <p className="mt-3 text-center text-xs text-ink/50">
-              Secure online checkout is coming soon — orders are currently
-              taken by email.
-            </p>
+            {stripeReady ? (
+              <>
+                <button
+                  onClick={stripeCheckout}
+                  disabled={checkingOut}
+                  className="block w-full cursor-pointer bg-saddle px-6 py-4 text-center font-display text-sm tracking-[0.25em] text-cream uppercase transition-colors hover:bg-bark disabled:cursor-wait disabled:opacity-60"
+                >
+                  {checkingOut ? "Opening Secure Checkout…" : "Secure Checkout"}
+                </button>
+                {checkoutError && (
+                  <p className="mt-3 text-center text-xs text-saddle">
+                    {checkoutError}{" "}
+                    <button
+                      onClick={orderEmail}
+                      className="cursor-pointer underline underline-offset-2"
+                    >
+                      Order by email instead
+                    </button>
+                  </p>
+                )}
+                <p className="mt-3 text-center text-xs text-ink/50">
+                  Payments are processed securely by Stripe.
+                </p>
+              </>
+            ) : (
+              <>
+                <button
+                  onClick={orderEmail}
+                  className="block w-full cursor-pointer bg-saddle px-6 py-4 text-center font-display text-sm tracking-[0.25em] text-cream uppercase transition-colors hover:bg-bark"
+                >
+                  Place Order by Email
+                </button>
+                <p className="mt-3 text-center text-xs text-ink/50">
+                  Secure online checkout is coming soon — orders are currently
+                  taken by email.
+                </p>
+              </>
+            )}
           </div>
         )}
       </aside>

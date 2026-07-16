@@ -19,6 +19,13 @@ export interface Product {
   art: "polo-brown" | "field-khaki" | "cap" | "jacket" | "leather" | "tee";
   photo?: string;
   badge?: string;
+  /**
+   * Stripe price ID (price_...) from the Dashboard's Product catalog.
+   * When every cart item has one (and STRIPE_SECRET_KEY is set on the
+   * host), the cart offers secure Stripe checkout; otherwise it falls
+   * back to email ordering.
+   */
+  stripePriceId?: string;
 }
 
 export const products: Product[] = [

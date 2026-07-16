@@ -14,7 +14,7 @@ Router), TypeScript, and Tailwind CSS v4.
 | Ranches | `/listings` | Live filtering by type + state, sorting by price/acreage |
 | Ranch detail | `/listings/[slug]` | Cinematic property hero, property film player, highlights, water/wildlife/improvements, inquiry form |
 | Our Story | `/about` | Brand narrative, values, timeline, team |
-| The Outfitter | `/shop` | Apparel storefront with cart drawer (localStorage-persisted), email checkout |
+| The Outfitter | `/shop` | Apparel storefront with cart drawer (localStorage-persisted), Stripe checkout (email fallback) |
 | Contact | `/contact` | Contact details + inquiry form |
 
 ## Getting started
@@ -45,6 +45,24 @@ art automatically — see **`public/media/README.md`**. Short version:
 
 Nothing looks broken while media is missing; branded art renders in its
 place.
+
+## Stripe checkout (the Outfitter)
+
+Online checkout switches on automatically once two things exist:
+
+1. **Products in Stripe** — Dashboard → Product catalog → Add product
+   (one per Outfitter item, with its price). Copy each price ID
+   (`price_...`) into the matching product's `stripePriceId` in
+   `src/data/products.ts`.
+2. **The secret key on the host** — set `STRIPE_SECRET_KEY` as an
+   environment variable (see `.env.example`). Use `sk_test_...` while
+   testing (Dashboard "Test mode" toggle), then swap to `sk_live_...`.
+
+Until both are in place the cart quietly falls back to email ordering.
+Amounts are always read from Stripe's catalog server-side — the browser
+never controls prices. Successful payments land on `/shop/success`, and
+each payment carries the size/color selections in its metadata (visible
+on the payment in the Dashboard).
 
 ## Roadmap
 
