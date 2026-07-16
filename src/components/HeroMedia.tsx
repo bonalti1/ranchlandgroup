@@ -40,7 +40,7 @@ export default function HeroMedia() {
             videoOk ? "opacity-100" : "opacity-0"
           }`}
           src={site.heroVideo}
-          poster={videoOk ? site.heroPoster : undefined}
+          poster={site.heroPoster}
           autoPlay
           muted
           loop
