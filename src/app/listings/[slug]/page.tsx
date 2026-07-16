@@ -172,13 +172,27 @@ export default async function ListingPage({
               <InquiryForm subject={`Inquiry — ${listing.name}`} />
             </div>
             <div className="border-t border-ink/10 pt-5 text-center text-sm text-ink/70">
-              Prefer to talk?{" "}
-              <a
-                href={site.phoneHref}
-                className="font-semibold text-saddle underline underline-offset-2"
-              >
-                {site.phone}
-              </a>
+              {listing.agent ? (
+                <>
+                  Listing agent: {listing.agent.name} ·{" "}
+                  <a
+                    href={listing.agent.phoneHref}
+                    className="font-semibold text-saddle underline underline-offset-2"
+                  >
+                    {listing.agent.phone}
+                  </a>
+                </>
+              ) : (
+                <>
+                  Prefer to talk?{" "}
+                  <a
+                    href={site.phoneHref}
+                    className="font-semibold text-saddle underline underline-offset-2"
+                  >
+                    {site.phone}
+                  </a>
+                </>
+              )}
             </div>
           </div>
         </Reveal>

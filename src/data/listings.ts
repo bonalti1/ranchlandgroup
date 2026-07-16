@@ -40,9 +40,54 @@ export interface Listing {
   water: string;
   wildlife: string;
   improvements: string;
+  /** Listing agent shown on this property's page (defaults to site contact). */
+  agent?: { name: string; phone: string; phoneHref: string };
 }
 
 export const listings: Listing[] = [
+  // ── REAL LISTING — Benavides Ranch (land.com ID 28031740) ──
+  {
+    slug: "benavides-ranch",
+    name: "Benavides Ranch",
+    county: "Zapata County",
+    state: "Texas",
+    region: "South Texas",
+    price: 1435700,
+    acres: 586,
+    type: "Hunting",
+    status: "Available",
+    featured: true,
+    scene: "highdesert",
+    video: "/media/listings/benavides-ranch.mp4",
+    headline:
+      "586± low-fence acres in the heart of the South Texas Golden Triangle — turnkey whitetail country 30 minutes from Laredo.",
+    description: [
+      "Benavides Ranch sits in the legendary Golden Triangle of South Texas, a region recognized worldwide for producing some of the finest trophy whitetail anywhere. Surrounded by expansive low-fence neighbors, the ranch enjoys exceptional wildlife movement across flat to gently rolling country blanketed in dense native brush.",
+      "The property hunts right now: two hunting blinds, multiple deer feeders, and several quail feeders have been maintained and supplied year-round, carrying strong populations of whitetail, bobwhite quail, dove, wild hogs, and javelina. Caliche ranch roads, senderos, and an established trail system put every corner of the ranch within easy reach, while the land itself remains largely undeveloped — a rare blank canvas for a hunting retreat, recreational ranch, cattle operation, or long-term hold.",
+      "Buy the entire 586± acres or take the North Tract (282± acres) or South Tract (304± acres) individually. A Wildlife Management Tax Exemption is in place. Ten minutes from San Ygnacio, thirty from Falcon Lake and Laredo. Electricity runs approximately 400 feet from FM 3169; a water well will need to be drilled (quote available on request). This is a surface-estate-only sale — the seller retains all mineral rights, and two inactive gas well sites on the property, inspected monthly by the operating company, do not convey.",
+    ],
+    highlights: [
+      "586± low-fence acres — whole, or as 282± / 304± acre tracts",
+      "Heart of the Golden Triangle, surrounded by large low-fence ranches",
+      "Trophy whitetail, bobwhite quail, dove, hogs & javelina",
+      "2 blinds, deer & quail feeders — fed year-round",
+      "Caliche roads, senderos & established trail system",
+      "Wildlife Management Tax Exemption in place",
+      "10 min to San Ygnacio · 30 min to Falcon Lake & Laredo",
+    ],
+    water:
+      "Water well to be drilled (quote available); electricity ±400 ft from FM 3169",
+    wildlife: "Trophy whitetail, bobwhite quail, dove, wild hogs, javelina",
+    improvements:
+      "Low-fenced perimeter, 2 hunting blinds, deer & quail feeders, caliche roads & senderos",
+    agent: {
+      name: "Orlando Pena",
+      phone: "(956) 594-7471",
+      phoneHref: "tel:+19565947471",
+    },
+  },
+
+  // ── Sample listings below — replace with real inventory ──
   {
     slug: "sierra-blanca-creek-ranch",
     name: "Sierra Blanca Creek Ranch",
@@ -119,7 +164,7 @@ export const listings: Listing[] = [
     acres: 7100,
     type: "Recreational",
     status: "Available",
-    featured: true,
+    featured: false,
     scene: "canyon",
     headline:
       "7,100± acres of dramatic Big Bend canyon country under the darkest skies in Texas.",
