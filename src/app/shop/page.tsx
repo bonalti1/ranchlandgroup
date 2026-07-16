@@ -14,7 +14,7 @@ export default function ShopPage() {
     <>
       <section className="relative overflow-hidden bg-ink pt-36 pb-20 text-cream">
         <div className="grain absolute inset-0" aria-hidden="true" />
-        <BuckMark className="pointer-events-none absolute -left-12 -bottom-20 h-80 w-80 text-cream/[0.05]" />
+        <BuckMark tone="cream" className="pointer-events-none absolute -left-12 -bottom-20 h-80 w-80 opacity-[0.05]" />
         <div className="relative mx-auto max-w-7xl px-5 text-center md:px-8">
           <Reveal>
             <p className="eyebrow text-brass">The Outfitter</p>

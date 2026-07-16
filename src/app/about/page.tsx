@@ -111,7 +111,7 @@ export default function AboutPage() {
             {values.map((v, i) => (
               <Reveal key={v.title} delay={i * 100}>
                 <div className="h-full bg-cream p-8 shadow-[0_2px_20px_rgba(36,27,18,0.08)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_18px_44px_rgba(36,27,18,0.14)]">
-                  <BuckMark className="h-10 w-10 text-saddle" />
+                  <BuckMark tone="saddle" className="h-10 w-10" />
                   <h3 className="mt-6 font-display text-xl">{v.title}</h3>
                   <p className="mt-4 leading-relaxed text-ink/70">{v.body}</p>
                 </div>
@@ -148,7 +148,7 @@ export default function AboutPage() {
               Led From the Front
             </h2>
             <div className="mx-auto mt-14 max-w-md bg-bark/60 p-10 backdrop-blur">
-              <BuckMark className="mx-auto h-14 w-14 text-brass" />
+              <BuckMark tone="brass" className="mx-auto h-14 w-14" />
               <h3 className="mt-6 font-display text-2xl tracking-wide">
                 Cristo Calderon
               </h3>

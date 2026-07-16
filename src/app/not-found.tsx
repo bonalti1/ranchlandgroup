@@ -6,7 +6,7 @@ export default function NotFound() {
     <section className="relative flex min-h-svh items-center justify-center overflow-hidden bg-ink text-cream">
       <div className="grain absolute inset-0" aria-hidden="true" />
       <div className="relative z-10 px-6 text-center">
-        <BuckMark className="mx-auto h-20 w-20 text-brass" />
+        <BuckMark tone="brass" className="mx-auto h-20 w-20" />
         <p className="eyebrow mt-8 text-brass">Off the Beaten Path</p>
         <h1 className="mt-4 font-display text-4xl md:text-6xl">
           This Pasture&apos;s Empty

@@ -1,10 +1,57 @@
+import Image from "next/image";
+
 /**
- * Ranch Land Group brand marks, recreated as SVG from the brand package.
- * Replace `BuckMark` paths with the production vector when the final
- * logo files are delivered — every usage site pulls from here.
+ * Ranch Land Group brand marks — the official logo artwork, processed
+ * into transparent PNGs in /public/brand (original brown for light
+ * backgrounds, plus cream/brass/saddle/bark tints for dark surfaces
+ * and watermarks). Regenerate the tints from the master logo file if
+ * the brand artwork ever changes.
  */
 
-/** Raw buck-emblem paths in a 100×100 user space, for embedding inside other SVGs. */
+export type BuckTone = "brown" | "cream" | "brass" | "saddle" | "bark";
+
+export function BuckMark({
+  tone = "brown",
+  className = "",
+}: {
+  tone?: BuckTone;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={`/brand/buck-${tone}.png`}
+      alt=""
+      width={361}
+      height={361}
+      className={className}
+      aria-hidden="true"
+    />
+  );
+}
+
+export function LogoLockup({
+  tone = "brown",
+  className = "",
+}: {
+  tone?: Extract<BuckTone, "brown" | "cream">;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={`/brand/lockup-${tone}.png`}
+      alt="Ranch Land Group"
+      width={1206}
+      height={360}
+      priority
+      className={className}
+    />
+  );
+}
+
+/**
+ * Simplified buck paths in a 100×100 user space — used only inside the
+ * illustrated product artwork, where a tintable vector emblem is needed.
+ */
 export function BuckPaths() {
   return (
     <>
@@ -33,54 +80,5 @@ export function BuckPaths() {
         fill="currentColor"
       />
     </>
-  );
-}
-
-export function BuckMark({ className = "" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 100 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-hidden="true"
-    >
-      <BuckPaths />
-    </svg>
-  );
-}
-
-export function LogoLockup({
-  className = "",
-  stacked = false,
-}: {
-  className?: string;
-  stacked?: boolean;
-}) {
-  if (stacked) {
-    return (
-      <span className={`flex flex-col items-center gap-2 ${className}`}>
-        <BuckMark className="h-14 w-14" />
-        <span className="font-display text-2xl tracking-[0.18em]">
-          Ranch Land
-        </span>
-        <span className="eyebrow flex items-center gap-3 opacity-80">
-          <span className="inline-block h-px w-6 bg-current" />
-          Group
-          <span className="inline-block h-px w-6 bg-current" />
-        </span>
-      </span>
-    );
-  }
-  return (
-    <span className={`flex items-center gap-3 ${className}`}>
-      <BuckMark className="h-10 w-10 shrink-0" />
-      <span className="flex flex-col leading-none">
-        <span className="font-display text-lg tracking-[0.18em] whitespace-nowrap">
-          Ranch Land
-        </span>
-        <span className="eyebrow mt-1 !text-[0.55rem] opacity-80">Group</span>
-      </span>
-    </span>
   );
 }

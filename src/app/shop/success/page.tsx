@@ -14,7 +14,7 @@ export default function OrderSuccessPage() {
       <div className="grain absolute inset-0" aria-hidden="true" />
       <div className="relative z-10 px-6 text-center">
         <ClearCart />
-        <BuckMark className="mx-auto h-20 w-20 text-brass" />
+        <BuckMark tone="brass" className="mx-auto h-20 w-20" />
         <p className="eyebrow mt-8 text-brass">The Outfitter</p>
         <h1 className="mt-4 font-display text-4xl md:text-6xl">
           Order Confirmed

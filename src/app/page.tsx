@@ -18,7 +18,7 @@ export default function Home() {
         <HeroMedia />
         <div className="relative z-10 mx-auto max-w-5xl px-6 pt-24 pb-32 text-center">
           <Reveal>
-            <BuckMark className="mx-auto h-20 w-20 text-cream md:h-24 md:w-24" />
+            <BuckMark tone="cream" className="mx-auto h-20 w-20 md:h-24 md:w-24" />
           </Reveal>
           <Reveal delay={150}>
             <p className="eyebrow mt-8 text-brass">Ranch Land Group</p>
@@ -99,7 +99,7 @@ export default function Home() {
       {/* ── Numbers band ─────────────────────────────────── */}
       <section className="relative overflow-hidden bg-ink py-24 text-cream">
         <div className="grain absolute inset-0" aria-hidden="true" />
-        <BuckMark className="pointer-events-none absolute -top-20 -left-16 h-80 w-80 text-cream/[0.04]" />
+        <BuckMark tone="cream" className="pointer-events-none absolute -top-20 -left-16 h-80 w-80 opacity-[0.05]" />
         <div className="relative mx-auto grid max-w-6xl gap-14 px-6 sm:grid-cols-2 lg:grid-cols-4">
           <StatCounter value={31000} suffix="+" label="Acres Represented" />
           <StatCounter value={28} prefix="$" suffix="M+" label="Active Inventory" />
@@ -190,7 +190,7 @@ export default function Home() {
         <div className="grain absolute inset-0" aria-hidden="true" />
         <div className="relative mx-auto max-w-3xl px-6 text-center">
           <Reveal>
-            <BuckMark className="mx-auto h-16 w-16 text-brass" />
+            <BuckMark tone="brass" className="mx-auto h-16 w-16" />
             <h2 className="mt-8 font-display text-3xl leading-snug md:text-5xl">
               Thinking About Buying
               <br />

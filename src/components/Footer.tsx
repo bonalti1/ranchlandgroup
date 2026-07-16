@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="relative mx-auto max-w-7xl px-5 pt-20 pb-10 md:px-8">
         <div className="grid gap-14 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <LogoLockup stacked className="items-start text-left [&>span:nth-child(2)]:text-3xl" />
+            <LogoLockup tone="cream" className="h-20 w-auto" />
             <p className="mt-6 max-w-sm leading-relaxed text-cream/70">
               {site.tagline} We market and sell legacy ranches, hunting land,
               and recreational properties across Texas and the American West.
@@ -92,7 +92,7 @@ export default function Footer() {
       </div>
 
       {/* oversized watermark buck */}
-      <BuckMark className="pointer-events-none absolute -right-16 -bottom-24 h-96 w-96 text-cream/[0.04]" />
+      <BuckMark tone="cream" className="pointer-events-none absolute -right-16 -bottom-24 h-96 w-96 opacity-[0.05]" />
     </footer>
   );
 }

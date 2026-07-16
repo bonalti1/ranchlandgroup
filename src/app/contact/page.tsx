@@ -15,7 +15,7 @@ export default function ContactPage() {
     <>
       <section className="relative overflow-hidden bg-ink pt-36 pb-20 text-cream">
         <div className="grain absolute inset-0" aria-hidden="true" />
-        <BuckMark className="pointer-events-none absolute -right-10 -bottom-16 h-72 w-72 text-cream/[0.05]" />
+        <BuckMark tone="cream" className="pointer-events-none absolute -right-10 -bottom-16 h-72 w-72 opacity-[0.05]" />
         <div className="relative mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <p className="eyebrow text-brass">Contact</p>

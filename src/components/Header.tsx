@@ -37,8 +37,15 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3 md:px-8">
-        <Link href="/" aria-label="Ranch Land Group — home">
-          <LogoLockup />
+        <Link href="/" aria-label="Ranch Land Group — home" className="relative block h-11 w-40 md:w-44">
+          <LogoLockup
+            tone="cream"
+            className={`absolute inset-0 h-full w-full object-contain object-left transition-opacity duration-500 ${solid ? "opacity-0" : "opacity-100"}`}
+          />
+          <LogoLockup
+            tone="brown"
+            className={`absolute inset-0 h-full w-full object-contain object-left transition-opacity duration-500 ${solid ? "opacity-100" : "opacity-0"}`}
+          />
         </Link>
 
         <nav className="hidden items-center gap-9 md:flex">
