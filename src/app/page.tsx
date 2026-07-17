@@ -101,9 +101,9 @@ export default function Home() {
         <div className="grain absolute inset-0" aria-hidden="true" />
         <BuckMark tone="cream" className="pointer-events-none absolute -top-20 -left-16 h-80 w-80 opacity-[0.05]" />
         <div className="relative mx-auto grid max-w-6xl gap-14 px-6 sm:grid-cols-2 lg:grid-cols-4">
-          <StatCounter value={13600} suffix="+" label="South Texas Acres" />
-          <StatCounter value={35} prefix="$" suffix="M+" label="Active Inventory" />
-          <StatCounter value={7} label="Ranches Offered" />
+          <StatCounter value={9300} suffix="+" label="South Texas Acres" />
+          <StatCounter value={22} prefix="$" suffix="M+" label="Active Inventory" />
+          <StatCounter value={5} label="Ranches Offered" />
           <StatCounter value={3} label="Generations of Land Know-How" />
         </div>
       </section>

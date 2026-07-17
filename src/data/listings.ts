@@ -99,69 +99,6 @@ export const listings: Listing[] = [
 
   // ── Sample listings below — replace with real inventory ──
   {
-    slug: "cenizo-creek-ranch",
-    name: "Cenizo Creek Ranch",
-    county: "La Salle County",
-    state: "Texas",
-    region: "Golden Triangle",
-    price: 4850000,
-    acres: 1900,
-    type: "Hunting",
-    status: "Available",
-    featured: true,
-    scene: "prairie",
-    headline:
-      "1,900± acres of prime La Salle County brush with a decade of protein and proven 170+ class genetics.",
-    description: [
-      "Cenizo Creek Ranch is the kind of country that made the Golden Triangle famous — deep native brush laced with senderos, a seasonal creek bottom through the middle, and neighbors managed just as seriously as this ranch has been.",
-      "A decade of year-round protein and disciplined harvest has produced a documented history of 170+ class whitetail alongside strong bobwhite numbers, dove flights on the tanks, and hogs and javelina in the creek bottom.",
-      "A comfortable owner's camp, equipment barn, and a full complement of blinds and feeders convey — hunt it the weekend after closing.",
-    ],
-    highlights: [
-      "1,900± acres of managed Golden Triangle brush",
-      "170+ class whitetail history, 10-year protein program",
-      "Seasonal creek bottom & 6 stock tanks",
-      "Owner's camp, equipment barn, working pens",
-      "12 blinds & 14 feeders convey",
-      "20 minutes to Cotulla, I-35 access",
-    ],
-    water: "Seasonal creek, 3 water wells, 6 stock tanks, piped water to plots",
-    wildlife: "Trophy whitetail, bobwhite quail, dove, hogs, javelina",
-    improvements: "Owner's camp, equipment barn, pens, blinds & feeders convey",
-  },
-  {
-    slug: "encino-vista-ranch",
-    name: "Encino Vista Ranch",
-    county: "Duval County",
-    state: "Texas",
-    region: "Brush Country",
-    price: 7900000,
-    acres: 2400,
-    type: "Luxury",
-    status: "Available",
-    featured: true,
-    scene: "river",
-    headline:
-      "A 2,400± acre turnkey South Texas showpiece — 6,500 sq ft lodge, stocked lakes, and helicopter-surveyed genetics.",
-    description: [
-      "Encino Vista is the full South Texas package: a 6,500 square foot hacienda-style lodge under century-old encinos, overlooking a stocked bass lake with the brush country running to the horizon behind it.",
-      "The ranch has been managed at the highest level — helicopter surveys, MLDP harvest, year-round protein — and it shows in the deer. Two additional lakes hold bass and provide duck hunting in the winter months.",
-      "With staff housing, a five-bay equipment barn, walk-in cooler, and a private airstrip, the operation runs turnkey for family retreats or corporate entertainment alike.",
-    ],
-    highlights: [
-      "2,400± acres, high-fenced and intensively managed",
-      "6,500 sq ft hacienda lodge, sleeps 16",
-      "3 stocked lakes — trophy bass & winter ducks",
-      "MLDP program, helicopter-surveyed herd",
-      "Staff housing, 5-bay barn, walk-in cooler",
-      "Private caliche airstrip, 1 hour to Corpus Christi",
-    ],
-    water: "3 stocked lakes, 4 wells, pipeline to troughs & plots",
-    wildlife: "Trophy whitetail, bass, ducks, quail, dove, hogs",
-    improvements:
-      "Hacienda lodge, staff housing, 5-bay barn, cooler, airstrip, pens",
-  },
-  {
     slug: "palo-blanco-ranch",
     name: "Palo Blanco Ranch",
     county: "Jim Hogg County",
@@ -202,7 +139,7 @@ export const listings: Listing[] = [
     acres: 4800,
     type: "Cattle",
     status: "Available",
-    featured: false,
+    featured: true,
     scene: "hillcountry",
     headline:
       "A 4,800± acre working cow-calf and hunting combination running 300 pairs on strong native grass.",
@@ -241,7 +178,7 @@ export const listings: Listing[] = [
     description: [
       "Arroyo Alamo pairs Dimmit County's famous genetics with a headquarters that belongs in a design annual — a 4,800 square foot limestone-and-steel lodge framing sunset views over the deepest brush on the ranch.",
       "High-fenced and managed for over a decade, the herd carries documented 180+ class production, supported by a protein program, food plots along the arroyo, and water piped to every corner.",
-      "Under contract — but we have qualified back-up interest, and buyers who missed it should see Cenizo Creek and Zapata TX Ranch.",
+      "Under contract — but we have qualified back-up interest, and buyers who missed it should see Dos Arroyos and Zapata TX Ranch.",
     ],
     highlights: [
       "1,750± acres under 8' high fence",
@@ -265,7 +202,7 @@ export const listings: Listing[] = [
     acres: 1250,
     type: "Hunting",
     status: "Available",
-    featured: false,
+    featured: true,
     scene: "highdesert",
     headline:
       "1,250± high-fenced Webb County acres with proven 170+ class whitetail genetics and a turnkey lodge.",
