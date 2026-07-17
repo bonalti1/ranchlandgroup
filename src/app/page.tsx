@@ -32,9 +32,9 @@ export default function Home() {
           </Reveal>
           <Reveal delay={450}>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-cream/80 md:text-xl">
-              Premier ranches, hunting country, and recreational land across
-              Texas and the American West — marketed with cinema-grade film
-              and sold by people who live this life.
+              Premier hunting ranches and recreational land across South Texas
+              — from the Golden Triangle to the Rio Grande — marketed with
+              cinema-grade film and sold by people who live this life.
             </p>
           </Reveal>
           <Reveal delay={600}>
@@ -101,8 +101,8 @@ export default function Home() {
         <div className="grain absolute inset-0" aria-hidden="true" />
         <BuckMark tone="cream" className="pointer-events-none absolute -top-20 -left-16 h-80 w-80 opacity-[0.05]" />
         <div className="relative mx-auto grid max-w-6xl gap-14 px-6 sm:grid-cols-2 lg:grid-cols-4">
-          <StatCounter value={31500} suffix="+" label="Acres Represented" />
-          <StatCounter value={29} prefix="$" suffix="M+" label="Active Inventory" />
+          <StatCounter value={13600} suffix="+" label="South Texas Acres" />
+          <StatCounter value={35} prefix="$" suffix="M+" label="Active Inventory" />
           <StatCounter value={7} label="Ranches Offered" />
           <StatCounter value={3} label="Generations of Land Know-How" />
         </div>
@@ -137,7 +137,7 @@ export default function Home() {
           <p className="text-lg leading-relaxed text-ink/75">
             Ranch Land Group was founded on a simple belief: selling a ranch
             is not a transaction — it&apos;s the transfer of a legacy. We pair
-            deep West Texas roots with modern marketing — cinematic film,
+            deep South Texas roots with modern marketing — cinematic film,
             aerial mapping, and a national buyer network — so the land that
             shaped your family finds the family it will shape next.
           </p>

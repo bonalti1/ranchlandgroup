@@ -25,11 +25,11 @@ export const metadata: Metadata = {
   },
   description: site.description,
   keywords: [
-    "ranches for sale",
-    "Texas ranch real estate",
-    "hunting land for sale",
-    "land brokerage",
-    "West Texas ranches",
+    "South Texas ranches for sale",
+    "hunting land South Texas",
+    "Golden Triangle whitetail ranches",
+    "Zapata Webb La Salle county land",
+    "ranch brokerage South Texas",
     "Ranch Land Group",
   ],
   openGraph: {

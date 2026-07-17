@@ -7,14 +7,14 @@ export const site = {
   name: "Ranch Land Group",
   tagline: "Legacy Land. Expertly Sold.",
   description:
-    "Ranch Land Group is a premier ranch and land brokerage specializing in " +
-    "legacy ranches, hunting land, and recreational properties across Texas " +
-    "and the American West.",
+    "Ranch Land Group is South Texas' ranch and land brokerage — hunting " +
+    "ranches, recreational land, and legacy properties from the Golden " +
+    "Triangle to the Rio Grande, marketed with cinema-grade film.",
   phone: "(915) 479-1534",
   phoneHref: "tel:+19154791534",
   email: "cristo@ranchlandgroup.com",
   website: "ranchlandgroup.com",
-  address: "El Paso, Texas",
+  address: "McAllen, Texas",
 
   /**
    * Drop your cinematic brand film at /public/media/hero.mp4 (H.264,

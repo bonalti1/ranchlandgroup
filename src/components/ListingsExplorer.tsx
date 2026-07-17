@@ -2,10 +2,10 @@
 
 import { useMemo, useState } from "react";
 import ListingCard from "./ListingCard";
-import { listings } from "@/data/listings";
+import { listings, listingCounties } from "@/data/listings";
 
 const types = ["All", "Hunting", "Cattle", "Recreational", "Luxury"] as const;
-const states = ["All States", "Texas", "New Mexico"] as const;
+const counties = ["All Counties", ...listingCounties];
 const sorts = [
   ["price-desc", "Price · High to Low"],
   ["price-asc", "Price · Low to High"],
@@ -16,14 +16,14 @@ const sorts = [
 /** Live-filtering ranch browser for the listings index. */
 export default function ListingsExplorer() {
   const [type, setType] = useState<(typeof types)[number]>("All");
-  const [state, setState] = useState<(typeof states)[number]>("All States");
+  const [county, setCounty] = useState("All Counties");
   const [sort, setSort] = useState<(typeof sorts)[number][0]>("price-desc");
 
   const results = useMemo(() => {
     let out = listings.filter(
       (l) =>
         (type === "All" || l.type === type) &&
-        (state === "All States" || l.state === state),
+        (county === "All Counties" || l.county === county),
     );
     out = [...out].sort((a, b) => {
       switch (sort) {
@@ -38,7 +38,7 @@ export default function ListingsExplorer() {
       }
     });
     return out;
-  }, [type, state, sort]);
+  }, [type, county, sort]);
 
   return (
     <div>
@@ -62,13 +62,13 @@ export default function ListingsExplorer() {
 
         <div className="flex flex-wrap items-center gap-4">
           <select
-            value={state}
-            onChange={(e) => setState(e.target.value as (typeof states)[number])}
+            value={county}
+            onChange={(e) => setCounty(e.target.value)}
             className="eyebrow cursor-pointer border border-ink/20 bg-transparent px-4 py-2.5"
-            aria-label="Filter by state"
+            aria-label="Filter by county"
           >
-            {states.map((s) => (
-              <option key={s}>{s}</option>
+            {counties.map((c) => (
+              <option key={c}>{c}</option>
             ))}
           </select>
           <select

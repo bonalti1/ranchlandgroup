@@ -6,7 +6,7 @@ import { BuckMark } from "@/components/Logo";
 export const metadata: Metadata = {
   title: "Ranches for Sale",
   description:
-    "Browse premier ranches, hunting land, and recreational properties for sale across Texas and the American West with Ranch Land Group.",
+    "Browse premier South Texas hunting ranches and recreational land for sale — Golden Triangle brush country to the Rio Grande — with Ranch Land Group.",
 };
 
 export default function ListingsPage() {

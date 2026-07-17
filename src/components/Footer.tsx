@@ -11,8 +11,8 @@ export default function Footer() {
           <div>
             <LogoLockup tone="cream" className="h-20 w-auto" />
             <p className="mt-6 max-w-sm leading-relaxed text-cream/70">
-              {site.tagline} We market and sell legacy ranches, hunting land,
-              and recreational properties across Texas and the American West.
+              {site.tagline} We market and sell South Texas hunting ranches,
+              recreational land, and legacy properties — Golden Triangle to the Rio Grande.
             </p>
           </div>
 

@@ -8,7 +8,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Our Story",
   description:
-    "Ranch Land Group pairs deep West Texas roots with modern marketing to sell legacy ranches across Texas and the American West.",
+    "Ranch Land Group pairs deep South Texas roots with modern marketing to sell hunting ranches and legacy land from the Golden Triangle to the Rio Grande.",
 };
 
 const values = [
@@ -33,11 +33,11 @@ const values = [
 const milestones = [
   {
     year: "The Roots",
-    text: "Three generations working cattle and hunting country across West Texas — the land knowledge came before the license ever did.",
+    text: "Three generations working cattle and hunting the brush country of South Texas — the land knowledge came before the license ever did.",
   },
   {
     year: "The Brokerage",
-    text: "Ranch Land Group is founded in El Paso to give legacy properties the marketing sophistication of a national brand with the boots-on-the-ground feel of a neighbor.",
+    text: "Ranch Land Group is founded in South Texas to give the region's legacy properties the marketing sophistication of a national brand with the boots-on-the-ground feel of a neighbor.",
   },
   {
     year: "The Brand",
@@ -80,11 +80,11 @@ export default function AboutPage() {
           <div className="rule my-10" />
           <div className="space-y-6 text-lg leading-relaxed text-ink/75">
             <p>
-              Our founder&apos;s family has worked cattle and hunted the country
-              around El Paso for three generations. That upbringing taught us
-              what city brokerages can&apos;t learn: how to read a pasture in a
-              dry year, what a water well is really worth, and why a man&apos;s
-              word matters more than his paperwork.
+              Our founder&apos;s family has worked cattle and hunted the brush
+              country of South Texas for three generations. That upbringing
+              taught us what city brokerages can&apos;t learn: how to read a
+              pasture in a dry year, what a water well is really worth, and
+              why a man&apos;s word matters more than his paperwork.
             </p>
             <p>
               Today we pair those roots with the most modern marketing in the
@@ -154,9 +154,9 @@ export default function AboutPage() {
               </h3>
               <p className="eyebrow mt-2 text-cream/60">Managing Partner</p>
               <p className="mt-6 leading-relaxed text-cream/75">
-                Raised in West Texas ranch country and schooled in modern real
-                estate, Cristo built Ranch Land Group to give legacy land the
-                representation it deserves.
+                Raised in South Texas ranch country and schooled in modern real
+                estate, Cristo built Ranch Land Group to give the Golden
+                Triangle&apos;s legacy land the representation it deserves.
               </p>
               <div className="mt-8 space-y-2 text-sm text-cream/70">
                 <p>
