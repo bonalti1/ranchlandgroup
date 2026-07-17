@@ -27,8 +27,12 @@ export async function generateMetadata({
   const listing = getListing((await params).slug);
   if (!listing) return {};
   return {
-    title: `${listing.name} — ${listing.county}, ${listing.state}`,
-    description: listing.headline,
+    title: `${listing.name} — ${formatAcres(listing.acres)} in ${listing.county}, ${listing.state}`,
+    description: `${formatPrice(listing.price)} · ${listing.headline}`,
+    alternates: { canonical: `/listings/${listing.slug}` },
+    openGraph: listing.photos?.length
+      ? { images: [{ url: listing.photos[0] }] }
+      : undefined,
   };
 }
 
@@ -42,8 +46,32 @@ export default async function ListingPage({
 
   const others = listings.filter((l) => l.slug !== listing.slug).slice(0, 3);
 
+  const listingSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: `${listing.name} — ${listing.acres.toLocaleString("en-US")}± acres, ${listing.county}, ${listing.state}`,
+    description: listing.headline,
+    url: `https://ranchlandgroup.com/listings/${listing.slug}`,
+    image: listing.photos?.map((p) => `https://ranchlandgroup.com${p}`),
+    category: "Ranch / Land for Sale",
+    offers: {
+      "@type": "Offer",
+      price: listing.price,
+      priceCurrency: "USD",
+      availability:
+        listing.status === "Available"
+          ? "https://schema.org/InStock"
+          : "https://schema.org/SoldOut",
+      seller: { "@type": "RealEstateAgent", name: "Ranch Land Group" },
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(listingSchema) }}
+      />
       {/* ── Property hero ────────────────────────────────── */}
       <section className="relative flex min-h-[78svh] items-end overflow-hidden bg-ink text-cream">
         <div className="absolute inset-0" aria-hidden="true">

@@ -19,6 +19,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ranchlandgroup.com"),
   title: {
     default: `${site.name} — ${site.tagline}`,
     template: `%s — ${site.name}`,
@@ -45,9 +46,42 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    name: site.name,
+    url: "https://ranchlandgroup.com",
+    logo: "https://ranchlandgroup.com/brand/lockup-brown.png",
+    image: "https://ranchlandgroup.com/media/hero-poster.jpg",
+    telephone: site.phone,
+    email: site.email,
+    slogan: site.tagline,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "McAllen",
+      addressRegion: "TX",
+      addressCountry: "US",
+    },
+    areaServed: [
+      "South Texas",
+      "Zapata County TX",
+      "Webb County TX",
+      "Starr County TX",
+      "Jim Hogg County TX",
+      "Duval County TX",
+      "Dimmit County TX",
+      "La Salle County TX",
+    ],
+    sameAs: Object.values(site.social),
+  };
+
   return (
     <html lang="en">
       <body className={`${cinzel.variable} ${lora.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
         <CartProvider>
           <Header />
           <main>{children}</main>
