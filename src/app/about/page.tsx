@@ -35,10 +35,10 @@ const values = [
  * cards render the name/title line only when provided.
  */
 const team: { photo: string; name?: string; title?: string }[] = [
-  { photo: "/media/team/member-1.jpg" },
   { photo: "/media/team/member-2.jpg" },
-  { photo: "/media/team/member-3.jpg" },
   { photo: "/media/team/member-4.jpg" },
+  { photo: "/media/team/member-3.jpg" },
+  { photo: "/media/team/member-1.jpg" },
 ];
 
 const milestones = [
