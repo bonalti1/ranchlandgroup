@@ -1,10 +1,10 @@
 /**
- * Ranch Land Group — Outfitter (apparel) products.
+ * Ranch Land Group — Outfitter products.
  *
- * ⚠️  SAMPLE products modeled on the brand package apparel. Replace
- * with live inventory when production runs are ready. Product photos
- * drop into /public/media/shop/ — set `photo` to the path and it will
- * replace the branded art card.
+ * These are the launch products with real photography. Adjust names,
+ * prices, colors, and sizes here — the shop, cart, and homepage teaser
+ * all read from this file. To enable online card checkout, create each
+ * product in Stripe and set its `stripePriceId` (see README).
  */
 
 export interface Product {
@@ -15,7 +15,7 @@ export interface Product {
   colors: string[];
   sizes: string[];
   description: string;
-  /** Visual style for the branded product card art */
+  /** Fallback illustration style if no photo is set */
   art: "polo-brown" | "field-khaki" | "cap" | "jacket" | "leather" | "tee";
   photo?: string;
   badge?: string;
@@ -30,73 +30,47 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    id: "rlg-polo-bark",
-    name: "Ranch Polo — Bark Brown",
+    id: "rlg-performance-shirt",
+    name: "Performance Field Shirt — Khaki",
     category: "Shirts",
-    price: 58,
-    colors: ["Bark Brown", "Cream"],
+    price: 68,
+    colors: ["Khaki"],
     sizes: ["S", "M", "L", "XL", "XXL"],
     description:
-      "Heavyweight piqué polo in our signature bark brown with the embroidered buck over the heart. Office to pasture.",
-    art: "polo-brown",
-    badge: "Signature",
-  },
-  {
-    id: "rlg-field-shirt",
-    name: "Field Shirt — Khaki",
-    category: "Shirts",
-    price: 88,
-    colors: ["Khaki", "Stone"],
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    description:
-      "Brushed-twill two-pocket field shirt, cut for the truck and the blind. Tonal Ranch Land Group embroidery.",
+      "Lightweight vented performance shirt built for South Texas heat — two chest pockets, quick-dry weave, and the buck embroidered over the heart.",
     art: "field-khaki",
+    photo: "/media/shop/performance-shirt.jpg",
     badge: "Signature",
   },
   {
-    id: "rlg-ranch-cap",
-    name: "Ranch Cap — Buck Emblem",
+    id: "rlg-camo-cap",
+    name: "Ranch Cap — Brush Camo",
     category: "Headwear",
     price: 34,
-    colors: ["Bark Brown", "Khaki", "Cream"],
+    colors: ["Brush Camo"],
     sizes: ["One Size"],
     description:
-      "Six-panel unstructured cap with the buck emblem in raised embroidery and an antique-brass closure.",
+      "Low-profile cap in brush-country camo with the full Ranch Land Group lockup stitched front and center.",
     art: "cap",
-  },
-  {
-    id: "rlg-ranch-jacket",
-    name: "Ranch Jacket — Waxed Canvas",
-    category: "Outerwear",
-    price: 168,
-    colors: ["Saddle", "Bark Brown"],
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    description:
-      "10 oz waxed-canvas ranch jacket with a corduroy collar and blanket lining. Breaks in like a good saddle.",
-    art: "jacket",
+    photo: "/media/shop/cap.jpg",
   },
   {
     id: "rlg-leather-journal",
-    name: "Ranch Journal — Full Grain",
+    name: "Ranch Journal — Full Grain Leather",
     category: "Goods",
     price: 64,
-    colors: ["Saddle"],
+    colors: ["Saddle Brown"],
     sizes: ["One Size"],
     description:
-      "Full-grain leather journal, buck emblem debossed, wrapped closure. For notes taken on tailgates.",
+      "Full-grain leather journal with the buck debossed deep and a wrap strap that keeps your notes where you left them. For deals done on tailgates.",
     art: "leather",
+    photo: "/media/shop/leather-journal.jpg",
   },
-  {
-    id: "rlg-heritage-tee",
-    name: "Heritage Tee — Legacy Land",
-    category: "Shirts",
-    price: 32,
-    colors: ["Cream", "Bark Brown"],
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    description:
-      "Ring-spun cotton tee with the Legacy Land. Expertly Sold. lockup across the back and the buck up front.",
-    art: "tee",
-  },
+];
+
+export const productCategories = [
+  "All",
+  ...new Set(products.map((p) => p.category)),
 ];
 
 export const formatUsd = (n: number) =>

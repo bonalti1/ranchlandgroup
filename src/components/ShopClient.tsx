@@ -4,14 +4,17 @@ import Image from "next/image";
 import { useMemo, useState } from "react";
 import ProductArt from "./ProductArt";
 import Reveal from "./Reveal";
+import { BuckMark } from "./Logo";
 import { useCart } from "./CartProvider";
-import { products, formatUsd, type Product } from "@/data/products";
-
-const categories = ["All", "Shirts", "Headwear", "Outerwear", "Goods"] as const;
+import {
+  products,
+  productCategories,
+  formatUsd,
+  type Product,
+} from "@/data/products";
 
 export default function ShopClient() {
-  const [category, setCategory] =
-    useState<(typeof categories)[number]>("All");
+  const [category, setCategory] = useState("All");
 
   const visible = useMemo(
     () =>
@@ -28,7 +31,7 @@ export default function ShopClient() {
         role="group"
         aria-label="Filter products"
       >
-        {categories.map((c) => (
+        {productCategories.map((c) => (
           <button
             key={c}
             onClick={() => setCategory(c)}
@@ -49,6 +52,16 @@ export default function ShopClient() {
             <ProductCard product={p} />
           </Reveal>
         ))}
+        <Reveal delay={visible.length * 60}>
+          <div className="flex h-full min-h-[420px] flex-col items-center justify-center border-2 border-dashed border-ink/20 bg-cream/50 p-10 text-center">
+            <BuckMark tone="saddle" className="h-14 w-14 opacity-60" />
+            <h3 className="mt-6 font-display text-xl">More Gear In the Works</h3>
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-ink/60">
+              The full Outfitter line — outerwear, tees, and more ranch-tested
+              goods — is in production. Follow along or check back soon.
+            </p>
+          </div>
+        </Reveal>
       </div>
     </div>
   );

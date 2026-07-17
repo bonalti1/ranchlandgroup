@@ -6,7 +6,7 @@ import { BuckMark } from "@/components/Logo";
 export const metadata: Metadata = {
   title: "The Outfitter — Ranch Land Group Apparel",
   description:
-    "Ranch-tested apparel and goods carrying the Ranch Land Group buck — polos, field shirts, caps, waxed-canvas jackets, and leather goods.",
+    "Ranch-tested apparel and goods carrying the Ranch Land Group buck — performance shirts, caps, and leather goods, with more dropping soon.",
 };
 
 export default function ShopPage() {
@@ -23,8 +23,8 @@ export default function ShopPage() {
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-cream/75">
               The same gear our team wears from the closing table to the
-              caliche — built ranch-tough and carrying the buck. Selling land
-              is the business; this is the lifestyle.
+              caliche — built ranch-tough and carrying the buck. The first
+              drop is here, and more gear is in the works.
             </p>
           </Reveal>
         </div>

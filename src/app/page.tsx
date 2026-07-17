@@ -163,7 +163,8 @@ export default function Home() {
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-ink/70">
               Ranch-tested apparel and goods carrying the buck — the same
-              gear our team wears from the office to the pasture.
+              gear our team wears from the office to the pasture. More
+              products dropping soon.
             </p>
           </Reveal>
           <div className="grid gap-8 sm:grid-cols-3">
@@ -173,9 +174,19 @@ export default function Home() {
                   href="/shop"
                   className="group block overflow-hidden bg-cream shadow-[0_2px_20px_rgba(36,27,18,0.08)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_18px_44px_rgba(36,27,18,0.16)]"
                 >
-                  <div className="aspect-square overflow-hidden">
+                  <div className="relative aspect-square overflow-hidden bg-white">
                     <div className="h-full w-full transition-transform duration-700 group-hover:scale-[1.05]">
-                      <ProductArt art={p.art} />
+                      {p.photo ? (
+                        <Image
+                          src={p.photo}
+                          alt={p.name}
+                          fill
+                          className="object-cover"
+                          sizes="(min-width: 640px) 33vw, 100vw"
+                        />
+                      ) : (
+                        <ProductArt art={p.art} />
+                      )}
                     </div>
                   </div>
                   <div className="flex items-center justify-between p-6">
