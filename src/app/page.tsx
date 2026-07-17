@@ -1,9 +1,9 @@
 import Link from "next/link";
+import Image from "next/image";
 import HeroMedia from "@/components/HeroMedia";
 import Reveal from "@/components/Reveal";
 import ListingCard from "@/components/ListingCard";
 import StatCounter from "@/components/StatCounter";
-import SceneArt from "@/components/SceneArt";
 import ProductArt from "@/components/ProductArt";
 import { BuckMark } from "@/components/Logo";
 import { featuredListings } from "@/data/listings";
@@ -111,9 +111,15 @@ export default function Home() {
       {/* ── Story teaser ─────────────────────────────────── */}
       <section className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 md:grid-cols-2 md:px-8 md:py-32">
         <Reveal>
-          <div className="relative aspect-[4/5] overflow-hidden shadow-[0_24px_60px_rgba(36,27,18,0.25)]">
-            <SceneArt scene="river" animated className="absolute inset-0" />
-            <div className="absolute inset-0 flex items-end bg-gradient-to-t from-ink/60 to-transparent p-8">
+          <div className="relative aspect-[4/3] overflow-hidden shadow-[0_24px_60px_rgba(36,27,18,0.25)]">
+            <Image
+              src="/media/team.jpg"
+              alt="The Ranch Land Group team in the field"
+              fill
+              className="object-cover"
+              sizes="(min-width: 768px) 50vw, 100vw"
+            />
+            <div className="absolute inset-0 flex items-end bg-gradient-to-t from-ink/70 via-transparent to-transparent p-8">
               <p className="font-display text-xl text-cream italic">
                 “Land is the one thing they aren&apos;t making more of.”
               </p>
