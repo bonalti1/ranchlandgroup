@@ -76,10 +76,9 @@ export default function VideoBlock({
                 <path d="M6 4 L20 12 L6 20 Z" />
               </svg>
             </span>
-            <p className="eyebrow mt-6">Property Film — In Production</p>
+            <p className="eyebrow mt-6">Video Tour — Coming Soon</p>
             <p className="mt-2 max-w-sm px-6 text-center text-sm text-cream/70">
-              Our cinematography team is capturing {title} from the air and
-              the ground. The full film premieres here soon.
+              A video tour of {title} is on its way — check back soon.
             </p>
           </div>
           <div className="grain absolute inset-0" />

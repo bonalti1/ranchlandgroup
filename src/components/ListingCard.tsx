@@ -48,7 +48,7 @@ export default function ListingCard({
             <svg viewBox="0 0 12 12" className="h-2.5 w-2.5 fill-current">
               <path d="M2 1.5 L10.5 6 L2 10.5 Z" />
             </svg>
-            Film
+            Video
           </span>
         )}
 

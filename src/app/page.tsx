@@ -30,8 +30,8 @@ export default function Home() {
           <Reveal delay={450}>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-cream/80 md:text-xl">
               Premier hunting ranches and recreational land across South Texas
-              — from the Golden Triangle to the Rio Grande — marketed with
-              cinema-grade film and sold by people who live this life.
+              — from the Golden Triangle to the Rio Grande — sold by people
+              who live this life.
             </p>
           </Reveal>
           <Reveal delay={600}>
@@ -118,7 +118,7 @@ export default function Home() {
               playsInline
               preload="metadata"
               className="absolute inset-0 h-full w-full object-cover"
-              aria-label="Ranch Land Group brand film over South Texas brush country"
+              aria-label="Aerial view of South Texas brush country"
             />
           </div>
         </Reveal>
@@ -133,9 +133,9 @@ export default function Home() {
           <p className="text-lg leading-relaxed text-ink/75">
             Ranch Land Group was founded on a simple belief: selling a ranch
             is not a transaction — it&apos;s the transfer of a legacy. We pair
-            deep South Texas roots with modern marketing — cinematic film,
-            aerial mapping, and a national buyer network — so the land that
-            shaped your family finds the family it will shape next.
+            deep South Texas roots with modern marketing, aerial mapping,
+            and a national buyer network — so the land that shaped your
+            family finds the family it will shape next.
           </p>
           <Link
             href="/about"

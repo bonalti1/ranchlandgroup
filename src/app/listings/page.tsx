@@ -22,9 +22,9 @@ export default function ListingsPage() {
               Ranches for Sale
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-cream/75">
-              Every ranch we represent is walked, studied, and filmed before
-              it&apos;s listed. Click any property for the full story — film,
-              water, wildlife, and improvements.
+              Every ranch we represent is walked and studied before it&apos;s
+              listed. Click any property for the full story — water,
+              wildlife, and improvements.
             </p>
           </Reveal>
         </div>

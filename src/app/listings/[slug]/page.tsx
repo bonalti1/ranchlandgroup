@@ -107,7 +107,7 @@ export default async function ListingPage({
       {/* ── Film ─────────────────────────────────────────── */}
       <section className="mx-auto max-w-6xl px-5 py-20 md:px-8">
         <Reveal className="mb-10 text-center">
-          <p className="eyebrow text-saddle">The Film</p>
+          <p className="eyebrow text-saddle">Video Tour</p>
           <h2 className="mt-4 font-display text-3xl md:text-4xl">
             See the Ranch in Motion
           </h2>

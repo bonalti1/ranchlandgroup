@@ -17,8 +17,8 @@ const values = [
     body: "We don't list land we haven't walked. Fences, water, feed, access — we know the property before the first buyer ever calls.",
   },
   {
-    title: "Film It Like It Deserves",
-    body: "Every ranch gets cinema-grade film and aerial mapping. Great land deserves better than six phone photos and a plat.",
+    title: "Show It Like It Deserves",
+    body: "Every ranch gets professional photography, aerial mapping, and a full marketing package. Great land deserves better than six phone photos and a plat.",
   },
   {
     title: "Straight Talk",
@@ -52,7 +52,7 @@ const milestones = [
   },
   {
     year: "The Brand",
-    text: "The buck emblem debuts — on signs, on film, and on the gear in our Outfitter. A mark that stands for land done right.",
+    text: "The buck emblem debuts — on signs, on gates, and on the gear in our Outfitter. A mark that stands for land done right.",
   },
   {
     year: "What's Next",
@@ -110,11 +110,10 @@ export default function AboutPage() {
             </p>
             <p>
               Today we pair those roots with the most modern marketing in the
-              business — cinematic property films, aerial mapping, and a
+              business — professional photography, aerial mapping, and a
               national network of qualified land buyers. Every listing is
-              walked, studied, and filmed before it goes to market. Every
-              buyer is treated like a future neighbor, because out here,
-              they are.
+              walked and studied before it goes to market. Every buyer is
+              treated like a future neighbor, because out here, they are.
             </p>
           </div>
         </Reveal>
@@ -165,11 +164,10 @@ export default function AboutPage() {
         <div className="grain absolute inset-0" aria-hidden="true" />
         <div className="relative mx-auto max-w-4xl px-6 text-center">
           <Reveal>
-            <p className="eyebrow text-brass">The Team</p>
-            <h2 className="mt-4 font-display text-3xl md:text-5xl">
-              Led From the Front
+            <h2 className="font-display text-3xl md:text-5xl">
+              The Team
             </h2>
-            <div className="mt-14 grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-6">
+            <div className="mt-14 grid grid-cols-1 gap-8 sm:grid-cols-2">
               {team.map((member, i) => (
                 <div
                   key={member.photo}
@@ -203,7 +201,7 @@ export default function AboutPage() {
             </div>
             <p className="mx-auto mt-10 max-w-xl leading-relaxed text-cream/75">
               Builders, dealmakers, and lifelong hunters — the crew behind
-              every showing, every film, and every closing.
+              every showing, every deal, and every closing.
             </p>
             <div className="mt-8 space-y-2 text-sm text-cream/70">
               <p>
