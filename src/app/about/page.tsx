@@ -32,7 +32,7 @@ const values = [
 const milestones = [
   {
     year: "The Roots",
-    text: "Three generations working cattle and hunting the brush country of South Texas — the land knowledge came before the license ever did.",
+    text: "Our roots are in construction and real estate — years of building, developing, and closing deals — paired with a lifelong love of hunting the South Texas brush. Two worlds of know-how, one company.",
   },
   {
     year: "The Brokerage",
@@ -82,17 +82,19 @@ export default function AboutPage() {
           <p className="text-xl leading-relaxed text-ink/80 md:text-2xl md:leading-relaxed">
             Ranch Land Group exists because the best ranches were being sold
             like ordinary houses — a sign at the gate, a handful of photos,
-            and hope. We knew the land deserved better, because we grew up
-            on it.
+            and hope. We knew the land deserved better — so we built the
+            company we wished existed.
           </p>
           <div className="rule my-10" />
           <div className="space-y-6 text-lg leading-relaxed text-ink/75">
             <p>
-              Our founder&apos;s family has worked cattle and hunted the brush
-              country of South Texas for three generations. That upbringing
-              taught us what city brokerages can&apos;t learn: how to read a
-              pasture in a dry year, what a water well is really worth, and
-              why a man&apos;s word matters more than his paperwork.
+              We come from construction and real estate — years of building
+              projects, moving dirt, and closing deals taught us how to size
+              up land with a builder&apos;s eye: the water, the access, the
+              soil, the true cost of every improvement. And a lifelong love
+              of hunting the South Texas brush taught us the rest — what
+              makes a ranch worth owning, and what makes it worth passing
+              down.
             </p>
             <p>
               Today we pair those roots with the most modern marketing in the
@@ -162,9 +164,10 @@ export default function AboutPage() {
               </h3>
               <p className="eyebrow mt-2 text-cream/60">Managing Partner</p>
               <p className="mt-6 leading-relaxed text-cream/75">
-                Raised in South Texas ranch country and schooled in modern real
-                estate, Cristo built Ranch Land Group to give the Golden
-                Triangle&apos;s legacy land the representation it deserves.
+                With a background in construction and real estate and a
+                lifelong passion for the hunt, Cristo built Ranch Land Group
+                to give the Golden Triangle&apos;s legacy land the
+                representation it deserves.
               </p>
               <div className="mt-8 space-y-2 text-sm text-cream/70">
                 <p>
