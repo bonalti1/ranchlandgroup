@@ -3,7 +3,6 @@ import Image from "next/image";
 import HeroMedia from "@/components/HeroMedia";
 import Reveal from "@/components/Reveal";
 import ListingCard from "@/components/ListingCard";
-import StatCounter from "@/components/StatCounter";
 import TypedQuote from "@/components/TypedQuote";
 import { BuckMark } from "@/components/Logo";
 import { featuredListings } from "@/data/listings";
@@ -95,21 +94,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Numbers band ─────────────────────────────────── */}
+      {/* ── Quote band ───────────────────────────────────── */}
       <section className="relative overflow-hidden bg-ink py-24 text-cream">
         <div className="grain absolute inset-0" aria-hidden="true" />
         <BuckMark tone="cream" className="pointer-events-none absolute -top-20 -left-16 h-80 w-80 opacity-[0.05]" />
         <div className="relative mx-auto max-w-6xl px-6">
           <TypedQuote
             text="“Land is the one thing they aren’t making any more of.”"
-            className="mx-auto mb-16 max-w-3xl text-center font-display text-2xl text-cream italic md:text-3xl"
+            className="mx-auto max-w-3xl text-center font-display text-3xl text-cream italic md:text-4xl"
           />
-        </div>
-        <div className="relative mx-auto grid max-w-6xl gap-14 px-6 sm:grid-cols-2 lg:grid-cols-4">
-          <StatCounter value={9300} suffix="+" label="South Texas Acres" />
-          <StatCounter value={22} prefix="$" suffix="M+" label="Active Inventory" />
-          <StatCounter value={5} label="Ranches Offered" />
-          <StatCounter value={3} label="Generations of Land Know-How" />
         </div>
       </section>
 
