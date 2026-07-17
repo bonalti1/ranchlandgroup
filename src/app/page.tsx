@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import HeroMedia from "@/components/HeroMedia";
 import Reveal from "@/components/Reveal";
 import ListingCard from "@/components/ListingCard";
@@ -109,13 +108,17 @@ export default function Home() {
       {/* ── Story teaser ─────────────────────────────────── */}
       <section className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 md:grid-cols-2 md:px-8 md:py-32">
         <Reveal>
-          <div className="relative aspect-[4/3] overflow-hidden shadow-[0_24px_60px_rgba(36,27,18,0.25)]">
-            <Image
-              src="/media/team.jpg"
-              alt="The Ranch Land Group team in the field"
-              fill
-              className="object-cover"
-              sizes="(min-width: 768px) 50vw, 100vw"
+          <div className="relative aspect-video overflow-hidden shadow-[0_24px_60px_rgba(36,27,18,0.25)]">
+            <video
+              src="/media/about.mp4"
+              poster="/media/about-poster.jpg"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              className="absolute inset-0 h-full w-full object-cover"
+              aria-label="Ranch Land Group brand film over South Texas brush country"
             />
           </div>
         </Reveal>

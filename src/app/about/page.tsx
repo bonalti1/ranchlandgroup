@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import SceneArt from "@/components/SceneArt";
 import { BuckMark } from "@/components/Logo";
 import { site } from "@/data/site";
 
@@ -54,8 +53,17 @@ export default function AboutPage() {
     <>
       <section className="relative flex min-h-[70svh] items-end overflow-hidden bg-ink text-cream">
         <div className="absolute inset-0" aria-hidden="true">
-          <SceneArt scene="prairie" animated className="absolute inset-0" />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/10 to-ink/80" />
+          <video
+            src="/media/about.mp4"
+            poster="/media/about-poster.jpg"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/45 via-ink/0 to-ink/85" />
           <div className="grain absolute inset-0" />
         </div>
         <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-44 pb-16 md:px-8">
