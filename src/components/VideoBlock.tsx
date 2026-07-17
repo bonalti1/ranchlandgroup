@@ -8,7 +8,22 @@ import type { SceneKey } from "@/data/listings";
  * Property film block for listing pages. Renders a cinematic player
  * when the film exists at the listing's `video` path; otherwise shows
  * a branded "film in production" frame so the layout never breaks.
+ *
+ * `src` also accepts a YouTube or Vimeo URL — hosted films embed at
+ * full quality with no file-size constraints (recommended for films
+ * over ~25 MB).
  */
+
+function embedUrl(src: string): string | null {
+  const yt = src.match(
+    /(?:youtube\.com\/(?:watch\?v=|shorts\/|embed\/)|youtu\.be\/)([\w-]{6,})/,
+  );
+  if (yt) return `https://www.youtube-nocookie.com/embed/${yt[1]}?rel=0&modestbranding=1`;
+  const vimeo = src.match(/vimeo\.com\/(\d+)/);
+  if (vimeo) return `https://player.vimeo.com/video/${vimeo[1]}`;
+  return null;
+}
+
 export default function VideoBlock({
   src,
   scene,
@@ -22,6 +37,21 @@ export default function VideoBlock({
   const [playing, setPlaying] = useState(false);
   const [portrait, setPortrait] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  const hosted = src ? embedUrl(src) : null;
+  if (hosted) {
+    return (
+      <div className="relative aspect-video overflow-hidden bg-ink shadow-[0_24px_60px_rgba(36,27,18,0.35)]">
+        <iframe
+          src={hosted}
+          title={`${title} — property film`}
+          className="absolute inset-0 h-full w-full"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
 
   const toggle = () => {
     const v = videoRef.current;
