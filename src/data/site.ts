@@ -10,8 +10,8 @@ export const site = {
     "Ranch Land Group is South Texas' ranch and land brokerage — hunting " +
     "ranches, recreational land, and legacy properties from the Golden " +
     "Triangle to the Rio Grande.",
-  phone: "(915) 479-1534",
-  phoneHref: "tel:+19154791534",
+  phone: "(956) 586-6681",
+  phoneHref: "tel:+19565866681",
   email: "cristo@ranchlandgroup.com",
   website: "ranchlandgroup.com",
   address: "McAllen, Texas",
