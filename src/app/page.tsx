@@ -4,10 +4,8 @@ import HeroMedia from "@/components/HeroMedia";
 import Reveal from "@/components/Reveal";
 import ListingCard from "@/components/ListingCard";
 import StatCounter from "@/components/StatCounter";
-import ProductArt from "@/components/ProductArt";
 import { BuckMark } from "@/components/Logo";
 import { featuredListings } from "@/data/listings";
-import { products } from "@/data/products";
 import { site } from "@/data/site";
 
 export default function Home() {
@@ -151,55 +149,6 @@ export default function Home() {
             </span>
           </Link>
         </Reveal>
-      </section>
-
-      {/* ── Outfitter teaser ─────────────────────────────── */}
-      <section className="bg-sand/60 py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <Reveal className="mb-14 text-center">
-            <p className="eyebrow text-saddle">The Outfitter</p>
-            <h2 className="mt-4 font-display text-3xl md:text-5xl">
-              Wear the Brand
-            </h2>
-            <p className="mx-auto mt-6 max-w-xl text-lg text-ink/70">
-              Ranch-tested apparel and goods carrying the buck — the same
-              gear our team wears from the office to the pasture. More
-              products dropping soon.
-            </p>
-          </Reveal>
-          <div className="grid gap-8 sm:grid-cols-3">
-            {products.slice(0, 3).map((p, i) => (
-              <Reveal key={p.id} delay={i * 120}>
-                <Link
-                  href="/shop"
-                  className="group block overflow-hidden bg-cream shadow-[0_2px_20px_rgba(36,27,18,0.08)] transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_18px_44px_rgba(36,27,18,0.16)]"
-                >
-                  <div className="relative aspect-square overflow-hidden bg-white">
-                    <div className="h-full w-full transition-transform duration-700 group-hover:scale-[1.05]">
-                      {p.photo ? (
-                        <Image
-                          src={p.photo}
-                          alt={p.name}
-                          fill
-                          className="object-cover"
-                          sizes="(min-width: 640px) 33vw, 100vw"
-                        />
-                      ) : (
-                        <ProductArt art={p.art} />
-                      )}
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between p-6">
-                    <span className="font-display">{p.name}</span>
-                    <span className="eyebrow text-saddle group-hover:translate-x-1 transition-transform">
-                      Shop →
-                    </span>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* ── Closing CTA ──────────────────────────────────── */}
