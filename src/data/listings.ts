@@ -58,7 +58,7 @@ export const listings: Listing[] = [
     status: "Available",
     featured: true,
     scene: "highdesert",
-    video: "/media/listings/zapata-tx-ranch.mp4",
+    video: "https://youtu.be/r3hiB32SW8E",
     photos: [
       // hero/thumbnail first — clean entrance aerial, no baked-in text
       "/media/listings/zapata/zapata-06.jpg",
