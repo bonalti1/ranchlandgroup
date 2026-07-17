@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import { BuckMark } from "@/components/Logo";
 import { site } from "@/data/site";
@@ -27,6 +28,17 @@ const values = [
     title: "Legacy Over Transaction",
     body: "A ranch sale moves generations of work from one family to the next. We treat that transfer with the weight it carries.",
   },
+];
+
+/**
+ * Team roster — add each member's name and title as they're confirmed;
+ * cards render the name/title line only when provided.
+ */
+const team: { photo: string; name?: string; title?: string }[] = [
+  { photo: "/media/team/member-1.jpg" },
+  { photo: "/media/team/member-2.jpg" },
+  { photo: "/media/team/member-3.jpg" },
+  { photo: "/media/team/member-4.jpg" },
 ];
 
 const milestones = [
@@ -157,30 +169,53 @@ export default function AboutPage() {
             <h2 className="mt-4 font-display text-3xl md:text-5xl">
               Led From the Front
             </h2>
-            <div className="mx-auto mt-14 max-w-md bg-bark/60 p-10 backdrop-blur">
-              <BuckMark tone="brass" className="mx-auto h-14 w-14" />
-              <h3 className="mt-6 font-display text-2xl tracking-wide">
-                Cristo Calderon
-              </h3>
-              <p className="eyebrow mt-2 text-cream/60">Managing Partner</p>
-              <p className="mt-6 leading-relaxed text-cream/75">
-                With a background in construction and real estate and a
-                lifelong passion for the hunt, Cristo built Ranch Land Group
-                to give the Golden Triangle&apos;s legacy land the
-                representation it deserves.
+            <div className="mt-14 grid grid-cols-2 gap-5 md:grid-cols-4 md:gap-6">
+              {team.map((member, i) => (
+                <div
+                  key={member.photo}
+                  className="group overflow-hidden bg-bark/60 backdrop-blur"
+                >
+                  <div className="relative aspect-[4/5] overflow-hidden">
+                    <Image
+                      src={member.photo}
+                      alt={member.name ?? `Ranch Land Group team member ${i + 1}`}
+                      fill
+                      className="object-cover object-top transition-transform duration-700 group-hover:scale-[1.05]"
+                      sizes="(min-width: 768px) 25vw, 50vw"
+                    />
+                  </div>
+                  {(member.name || member.title) && (
+                    <div className="p-4 text-center">
+                      {member.name && (
+                        <h3 className="font-display text-lg tracking-wide">
+                          {member.name}
+                        </h3>
+                      )}
+                      {member.title && (
+                        <p className="eyebrow mt-1 !text-[0.58rem] text-cream/60">
+                          {member.title}
+                        </p>
+                      )}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+            <p className="mx-auto mt-10 max-w-xl leading-relaxed text-cream/75">
+              Builders, dealmakers, and lifelong hunters — the crew behind
+              every showing, every film, and every closing.
+            </p>
+            <div className="mt-8 space-y-2 text-sm text-cream/70">
+              <p>
+                <a href={site.phoneHref} className="hover:text-brass">
+                  {site.phone}
+                </a>
               </p>
-              <div className="mt-8 space-y-2 text-sm text-cream/70">
-                <p>
-                  <a href={site.phoneHref} className="hover:text-brass">
-                    {site.phone}
-                  </a>
-                </p>
-                <p>
-                  <a href={`mailto:${site.email}`} className="hover:text-brass">
-                    {site.email}
-                  </a>
-                </p>
-              </div>
+              <p>
+                <a href={`mailto:${site.email}`} className="hover:text-brass">
+                  {site.email}
+                </a>
+              </p>
             </div>
             <p className="mt-10 text-cream/60 italic">
               The team is growing — agent profiles land here as the brand
