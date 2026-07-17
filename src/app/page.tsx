@@ -4,6 +4,7 @@ import HeroMedia from "@/components/HeroMedia";
 import Reveal from "@/components/Reveal";
 import ListingCard from "@/components/ListingCard";
 import StatCounter from "@/components/StatCounter";
+import TypedQuote from "@/components/TypedQuote";
 import { BuckMark } from "@/components/Logo";
 import { featuredListings } from "@/data/listings";
 import { site } from "@/data/site";
@@ -98,6 +99,12 @@ export default function Home() {
       <section className="relative overflow-hidden bg-ink py-24 text-cream">
         <div className="grain absolute inset-0" aria-hidden="true" />
         <BuckMark tone="cream" className="pointer-events-none absolute -top-20 -left-16 h-80 w-80 opacity-[0.05]" />
+        <div className="relative mx-auto max-w-6xl px-6">
+          <TypedQuote
+            text="“Land is the one thing they aren’t making any more of.”"
+            className="mx-auto mb-16 max-w-3xl text-center font-display text-2xl text-cream italic md:text-3xl"
+          />
+        </div>
         <div className="relative mx-auto grid max-w-6xl gap-14 px-6 sm:grid-cols-2 lg:grid-cols-4">
           <StatCounter value={9300} suffix="+" label="South Texas Acres" />
           <StatCounter value={22} prefix="$" suffix="M+" label="Active Inventory" />
@@ -117,11 +124,6 @@ export default function Home() {
               className="object-cover"
               sizes="(min-width: 768px) 50vw, 100vw"
             />
-            <div className="absolute inset-0 flex items-end bg-gradient-to-t from-ink/70 via-transparent to-transparent p-8">
-              <p className="font-display text-xl text-cream italic">
-                “Land is the one thing they aren&apos;t making more of.”
-              </p>
-            </div>
           </div>
         </Reveal>
         <Reveal delay={150}>
