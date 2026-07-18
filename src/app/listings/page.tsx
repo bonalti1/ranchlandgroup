@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ListingsExplorer from "@/components/ListingsExplorer";
 import Reveal from "@/components/Reveal";
 import { BuckMark } from "@/components/Logo";
+import { counties } from "@/data/counties";
 
 export const metadata: Metadata = {
   title: "Ranches for Sale",
@@ -32,6 +34,31 @@ export default function ListingsPage() {
 
       <section className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20">
         <ListingsExplorer />
+      </section>
+
+      {/* ── county guides ────────────────────────────────── */}
+      <section className="bg-sand/60 py-16">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal className="mb-8 text-center">
+            <p className="eyebrow text-saddle">Know the Country</p>
+            <h2 className="mt-4 font-display text-2xl md:text-3xl">
+              Browse Ranches by County
+            </h2>
+          </Reveal>
+          <Reveal>
+            <div className="flex flex-wrap justify-center gap-3">
+              {counties.map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/ranches-for-sale/${c.slug}`}
+                  className="eyebrow border border-ink/20 bg-cream px-5 py-3 transition-colors hover:border-saddle hover:text-saddle"
+                >
+                  {c.name}
+                </Link>
+              ))}
+            </div>
+          </Reveal>
+        </div>
       </section>
     </>
   );

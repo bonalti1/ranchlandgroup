@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { listings } from "@/data/listings";
+import { counties } from "@/data/counties";
 
 const BASE = "https://ranchlandgroup.com";
 
@@ -17,5 +18,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}/listings/${l.slug}`,
     priority: 0.8,
   }));
-  return [...pages, ...listingPages];
+  const countyPages: MetadataRoute.Sitemap = counties.map((c) => ({
+    url: `${BASE}/ranches-for-sale/${c.slug}`,
+    priority: 0.8,
+  }));
+  return [...pages, ...listingPages, ...countyPages];
 }
