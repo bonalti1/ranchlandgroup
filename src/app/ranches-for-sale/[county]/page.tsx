@@ -54,13 +54,13 @@ export default async function CountyPage({
         "@type": "ListItem",
         position: 1,
         name: "Ranches for Sale",
-        item: "https://ranchlandgroup.com/listings",
+        item: "https://ranchland-group.com/listings",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: `${county.name}, Texas`,
-        item: `https://ranchlandgroup.com/ranches-for-sale/${county.slug}`,
+        item: `https://ranchland-group.com/ranches-for-sale/${county.slug}`,
       },
     ],
   };

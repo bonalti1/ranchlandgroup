@@ -51,8 +51,8 @@ export default async function ListingPage({
     "@type": "Product",
     name: `${listing.name} — ${listing.acres.toLocaleString("en-US")}± acres, ${listing.county}, ${listing.state}`,
     description: listing.headline,
-    url: `https://ranchlandgroup.com/listings/${listing.slug}`,
-    image: listing.photos?.map((p) => `https://ranchlandgroup.com${p}`),
+    url: `https://ranchland-group.com/listings/${listing.slug}`,
+    image: listing.photos?.map((p) => `https://ranchland-group.com${p}`),
     category: "Ranch / Land for Sale",
     offers: {
       "@type": "Offer",

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { listings } from "@/data/listings";
 import { counties } from "@/data/counties";
 
-const BASE = "https://ranchlandgroup.com";
+const BASE = "https://ranchland-group.com";
 
 export const dynamic = "force-static";
 

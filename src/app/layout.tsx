@@ -19,7 +19,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ranchlandgroup.com"),
+  metadataBase: new URL("https://ranchland-group.com"),
   title: {
     default: `${site.name} — ${site.tagline}`,
     template: `%s — ${site.name}`,
@@ -50,9 +50,9 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     name: site.name,
-    url: "https://ranchlandgroup.com",
-    logo: "https://ranchlandgroup.com/brand/lockup-brown.png",
-    image: "https://ranchlandgroup.com/media/hero-poster.jpg",
+    url: "https://ranchland-group.com",
+    logo: "https://ranchland-group.com/brand/lockup-brown.png",
+    image: "https://ranchland-group.com/media/hero-poster.jpg",
     telephone: site.phone,
     email: site.email,
     slogan: site.tagline,

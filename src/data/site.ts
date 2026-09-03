@@ -13,7 +13,7 @@ export const site = {
   phone: "(956) 586-6681",
   phoneHref: "tel:+19565866681",
   email: "cristo@ranchlandgroup.com",
-  website: "ranchlandgroup.com",
+  website: "ranchland-group.com",
   address: "McAllen, Texas",
 
   /**
