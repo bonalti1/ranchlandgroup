@@ -92,20 +92,16 @@ export default function AboutPage() {
       <section className="mx-auto max-w-3xl px-5 py-24 md:px-8">
         <Reveal>
           <p className="text-xl leading-relaxed text-ink/80 md:text-2xl md:leading-relaxed">
-            Ranch Land Group exists because great ranches were being sold
-            like ordinary houses. We knew the land deserved better — so we
-            built the company we wished existed.
+            When you buy a ranch through us, you buy land we know.
           </p>
           <div className="rule my-10" />
           <div className="space-y-6 text-lg leading-relaxed text-ink/75">
             <p>
-              We come from construction and real estate, with a lifelong
-              love of hunting the South Texas brush. That mix taught us how
-              to size up land with a builder&apos;s eye — water, access,
-              soil — and to know what makes a ranch worth owning. Every
-              listing is walked and studied before it goes to market, and
-              every buyer is treated like a future neighbor. Out here, they
-              are.
+              We&apos;ve walked every acre we list — checked the water, the
+              soil, the access, the fences — before you ever see it. We hunt
+              this brush ourselves, so we know what makes a property worth
+              owning. Straight answers, honest numbers, and a handshake that
+              still means something.
             </p>
           </div>
         </Reveal>
