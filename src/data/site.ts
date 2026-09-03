@@ -12,7 +12,7 @@ export const site = {
     "Triangle to the Rio Grande.",
   phone: "(956) 586-6681",
   phoneHref: "tel:+19565866681",
-  email: "cristo@ranchlandgroup.com",
+  email: "office.ranchland@gmail.com",
   website: "ranchland-group.com",
   address: "McAllen, Texas",
 
