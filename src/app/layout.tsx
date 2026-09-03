@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "hunting land South Texas",
     "Golden Triangle whitetail ranches",
     "Zapata Webb La Salle county land",
-    "ranch brokerage South Texas",
+    "recreational land for sale South Texas",
     "Ranch Land Group",
   ],
   openGraph: {

@@ -59,8 +59,8 @@ const milestones = [
     text: "Our roots are in construction and real estate — years of building, developing, and closing deals — paired with a lifelong love of hunting the South Texas brush. Two worlds of know-how, one company.",
   },
   {
-    year: "The Brokerage",
-    text: "Ranch Land Group is founded in South Texas to give the region's legacy properties the marketing sophistication of a national brand with the boots-on-the-ground feel of a neighbor.",
+    year: "The Team",
+    text: "Ranch Land Group comes together in South Texas — a team of land specialists, listing through a licensed REALTOR®, giving the region's legacy properties the marketing sophistication of a national brand with the boots-on-the-ground feel of a neighbor.",
   },
   {
     year: "The Brand",

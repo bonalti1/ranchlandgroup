@@ -7,7 +7,7 @@ export const site = {
   name: "Ranch Land Group",
   tagline: "Legacy Land. Expertly Sold.",
   description:
-    "Ranch Land Group is South Texas' ranch and land brokerage — hunting " +
+    "Ranch Land Group is South Texas' ranch and land team — hunting " +
     "ranches, recreational land, and legacy properties from the Golden " +
     "Triangle to the Rio Grande.",
   phone: "(956) 586-6681",

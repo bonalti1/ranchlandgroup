@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react";
 import { site } from "@/data/site";
 
 /**
- * Inquiry form. Currently composes an email to the brokerage —
+ * Inquiry form. Currently composes an email to the team —
  * swap `handleSubmit` for a CRM/API endpoint when the back office
  * infrastructure comes online.
  */
