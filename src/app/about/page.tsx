@@ -30,15 +30,27 @@ const values = [
   },
 ];
 
-/**
- * Team roster — add each member's name and title as they're confirmed;
- * cards render the name/title line only when provided.
- */
 const team: { photo: string; name?: string; title?: string }[] = [
-  { photo: "/media/team/member-2.jpg" },
-  { photo: "/media/team/member-4.jpg" },
-  { photo: "/media/team/member-3.jpg" },
-  { photo: "/media/team/member-1.jpg" },
+  {
+    photo: "/media/team/member-2.jpg",
+    name: "Cristo Calderon",
+    title: "Ranch Specialist",
+  },
+  {
+    photo: "/media/team/member-4.jpg",
+    name: "Rolando Pena",
+    title: "Director of Operations",
+  },
+  {
+    photo: "/media/team/member-3.jpg",
+    name: "Orlando Pena",
+    title: "REALTOR® · Listing Agent",
+  },
+  {
+    photo: "/media/team/member-1.jpg",
+    name: "Andres Richarte",
+    title: "Client Relations & Lending",
+  },
 ];
 
 const milestones = [
@@ -203,10 +215,6 @@ export default function AboutPage() {
                 </a>
               </p>
             </div>
-            <p className="mt-10 text-cream/60 italic">
-              The team is growing — agent profiles land here as the brand
-              expands.
-            </p>
             <Link
               href="/contact"
               className="mt-10 inline-block border border-cream/60 px-10 py-4 font-display text-sm tracking-[0.25em] uppercase transition-colors hover:border-cream hover:bg-cream/10"

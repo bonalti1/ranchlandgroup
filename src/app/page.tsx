@@ -129,11 +129,10 @@ export default function Home() {
           </h2>
           <div className="rule my-8 max-w-xs" />
           <p className="text-lg leading-relaxed text-ink/75">
-            Ranch Land Group was founded on a simple belief: selling a ranch
-            is not a transaction — it&apos;s the transfer of a legacy. We pair
-            deep South Texas roots with modern marketing, aerial mapping,
-            and a national buyer network — so the land that shaped your
-            family finds the family it will shape next.
+            When you buy a ranch through us, you buy land we know. We&apos;ve
+            walked every acre we list — checked the water, the soil, the
+            access, the fences — before you ever see it. Straight answers,
+            honest numbers, and a handshake that still means something.
           </p>
           <Link
             href="/about"
