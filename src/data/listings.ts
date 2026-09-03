@@ -25,7 +25,8 @@ export interface Listing {
   county: string;
   state: string;
   region: string;
-  price: number;
+  /** Asking price in USD, or null for "Call for Price". */
+  price: number | null;
   acres: number;
   type: "Hunting" | "Cattle" | "Recreational" | "Luxury" | "Farm & Ranch";
   status: ListingStatus;
@@ -97,6 +98,124 @@ export const listings: Listing[] = [
     },
   },
 
+  // ── REAL LISTING — Las Cuevas Ranch ──
+  {
+    slug: "las-cuevas-ranch",
+    name: "Las Cuevas Ranch",
+    county: "Starr County",
+    state: "Texas",
+    region: "Rio Grande Plains",
+    price: null, // call for price
+    acres: 300,
+    type: "Hunting",
+    status: "Available",
+    featured: true,
+    scene: "prairie",
+    photos: [
+      // hero/thumbnail first — gated entrance at dusk
+      "/media/listings/cuevas/cuevas-01.jpg",
+      "/media/listings/cuevas/cuevas-02.jpg",
+      "/media/listings/cuevas/cuevas-03.jpg",
+      "/media/listings/cuevas/cuevas-04.jpg",
+    ],
+    headline:
+      "300± acres of Starr County brush country behind a locked gate — windmill water, senderos, and ready-to-hunt cover.",
+    description: [
+      "Las Cuevas Ranch is 300± acres of classic Starr County brush — dense mesquite and native cover threaded with established senderos, all behind a gated entrance at the end of a quiet ranch road.",
+      "A windmill with a storage tank waters the property, and a feeder is already working the brush. Full listing details are being finalized — call us and we'll walk you through the ranch today.",
+    ],
+    highlights: [
+      "300± acres in Starr County",
+      "Gated entrance & interior senderos",
+      "Windmill well with storage tank",
+      "Dense native brush cover",
+      "Feeder in place — hunts right away",
+    ],
+    water: "Windmill well with storage tank",
+    wildlife: "Whitetail, quail, dove & hogs typical of Starr County brush",
+    improvements: "Gated entrance, senderos, deer feeder",
+  },
+
+  // ── REAL LISTING — Cuates Ranch ──
+  {
+    slug: "cuates-ranch",
+    name: "Cuates Ranch",
+    county: "Starr County",
+    state: "Texas",
+    region: "Rio Grande Plains",
+    price: null, // call for price
+    acres: 50,
+    type: "Hunting",
+    status: "Available",
+    featured: true,
+    scene: "prairie",
+    photos: [
+      // hero/thumbnail first — clean aerial with box blind & sendero
+      "/media/listings/cuates/cuates-01.jpg",
+      "/media/listings/cuates/cuates-02.jpg",
+      "/media/listings/cuates/cuates-03.jpg",
+      "/media/listings/cuates/cuates-04.jpg",
+      "/media/listings/cuates/cuates-05.jpg",
+      "/media/listings/cuates/cuates-06.jpg",
+      "/media/listings/cuates/cuates-07.jpg",
+    ],
+    headline:
+      "50± acres of thick Starr County brush off Sagunada Road — box blind, feeders, and trail cameras proving whitetail, turkey & hogs.",
+    description: [
+      "Cuates Ranch packs a lot of hunt into 50± acres: dense mesquite brush split by clean senderos, a box blind overlooking a feeding station, and a gated main entrance right off Sagunada Road.",
+      "The trail cameras tell the story — whitetail working the feeders through the morning, Rio Grande turkeys in the open, and hogs moving at night. A manageable tract that hunts far bigger than its acreage, sized right for a first ranch or a weekend getaway close to the Rio Grande Valley.",
+      "Full listing details are being finalized — call us and we'll walk you through the property today.",
+    ],
+    highlights: [
+      "50± acres in Starr County",
+      "Gated main entrance off Sagunada Road",
+      "Box blind & feeders in place",
+      "Trail cams confirm whitetail, Rio Grande turkey & hogs",
+      "Clean senderos through dense native brush",
+    ],
+    water: "Details coming — call for current information",
+    wildlife: "Whitetail, Rio Grande turkey & hogs on trail camera",
+    improvements: "Gated entrance, box blind, feeders, senderos",
+  },
+
+  // ── REAL LISTING — Pimienta Ranchette ──
+  {
+    slug: "pimienta-ranchette",
+    name: "Pimienta Ranchette",
+    county: "Starr County",
+    state: "Texas",
+    region: "Rio Grande Plains",
+    price: null, // call for price
+    acres: 10,
+    type: "Recreational",
+    status: "Available",
+    featured: true,
+    scene: "prairie",
+    photos: [
+      // hero/thumbnail first — custom-name entrance gate on Pimienta Rd
+      "/media/listings/pimienta/pimienta-01.jpg",
+      "/media/listings/pimienta/pimienta-02.jpg",
+      "/media/listings/pimienta/pimienta-03.jpg",
+    ],
+    headline:
+      "10± acre ranchettes on Pimienta Road in Starr County — road frontage, native brush, and a custom entrance gate with your name on it.",
+    description: [
+      "Pimienta Ranchette is your own piece of Starr County brush country in a size that's easy to own: 10± acre tracts fronting Pimienta Road, with good access and a healthy mix of open ground and native mesquite cover.",
+      "Every ranchette comes with the touch that makes it yours — a custom steel entrance gate built with your family's name across the top. Two tracts are currently marked and available; pick yours while they last.",
+      "Full listing details are being finalized — call us and we'll walk you through the property today.",
+    ],
+    highlights: [
+      "10± acre tracts in Starr County",
+      "Frontage and access on Pimienta Road",
+      "Custom name entrance gate included",
+      "Native mesquite brush with open ground",
+      "Two tracts currently available",
+    ],
+    water: "Details coming — call for current information",
+    wildlife: "Whitetail, dove & quail typical of Starr County brush",
+    improvements: "Custom-name entrance gate included with purchase",
+  },
+
   // ── Sample listings below — replace with real inventory ──
   {
     slug: "palo-blanco-ranch",
@@ -139,7 +258,7 @@ export const listings: Listing[] = [
     acres: 4800,
     type: "Cattle",
     status: "Available",
-    featured: true,
+    featured: false,
     scene: "hillcountry",
     headline:
       "A 4,800± acre working cow-calf and hunting combination running 300 pairs on strong native grass.",
@@ -202,7 +321,7 @@ export const listings: Listing[] = [
     acres: 1250,
     type: "Hunting",
     status: "Available",
-    featured: true,
+    featured: false,
     scene: "highdesert",
     headline:
       "1,250± high-fenced Webb County acres with proven 170+ class whitetail genetics and a turnkey lodge.",
@@ -225,12 +344,14 @@ export const listings: Listing[] = [
   },
 ];
 
-export const formatPrice = (n: number) =>
-  n.toLocaleString("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits: 0,
-  });
+export const formatPrice = (n: number | null) =>
+  n === null
+    ? "Call for Price"
+    : n.toLocaleString("en-US", {
+        style: "currency",
+        currency: "USD",
+        maximumFractionDigits: 0,
+      });
 
 export const formatAcres = (n: number) =>
   `${n.toLocaleString("en-US")}± acres`;

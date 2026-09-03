@@ -54,16 +54,18 @@ export default async function ListingPage({
     url: `https://ranchland-group.com/listings/${listing.slug}`,
     image: listing.photos?.map((p) => `https://ranchland-group.com${p}`),
     category: "Ranch / Land for Sale",
-    offers: {
-      "@type": "Offer",
-      price: listing.price,
-      priceCurrency: "USD",
-      availability:
-        listing.status === "Available"
-          ? "https://schema.org/InStock"
-          : "https://schema.org/SoldOut",
-      seller: { "@type": "RealEstateAgent", name: "Ranch Land Group" },
-    },
+    ...(listing.price !== null && {
+      offers: {
+        "@type": "Offer",
+        price: listing.price,
+        priceCurrency: "USD",
+        availability:
+          listing.status === "Available"
+            ? "https://schema.org/InStock"
+            : "https://schema.org/SoldOut",
+        seller: { "@type": "RealEstateAgent", name: "Ranch Land Group" },
+      },
+    }),
   };
 
   return (

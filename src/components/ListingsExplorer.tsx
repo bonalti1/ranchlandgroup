@@ -25,16 +25,18 @@ export default function ListingsExplorer() {
         (type === "All" || l.type === type) &&
         (county === "All Counties" || l.county === county),
     );
+    // Call-for-price listings (price null) sort after priced ones.
+    const price = (l: (typeof out)[number]) => l.price ?? -1;
     out = [...out].sort((a, b) => {
       switch (sort) {
         case "price-asc":
-          return a.price - b.price;
+          return (a.price ?? Infinity) - (b.price ?? Infinity);
         case "acres-desc":
           return b.acres - a.acres;
         case "acres-asc":
           return a.acres - b.acres;
         default:
-          return b.price - a.price;
+          return price(b) - price(a);
       }
     });
     return out;
