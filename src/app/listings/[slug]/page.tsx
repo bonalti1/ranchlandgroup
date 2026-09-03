@@ -200,10 +200,10 @@ export default async function ListingPage({
               <InquiryForm subject={`Inquiry — ${listing.name}`} />
             </div>
             <a
-              href={listing.agent?.phoneHref ?? site.phoneHref}
+              href={site.phoneHref}
               className="block w-full border border-saddle px-8 py-4 text-center font-display text-sm tracking-[0.25em] text-saddle uppercase transition-colors hover:bg-saddle hover:text-cream"
             >
-              Call {listing.agent?.phone ?? site.phone}
+              Call {site.phone}
             </a>
             <div className="mt-6 border-t border-ink/10 pt-5 text-center text-sm text-ink/70">
               {listing.agent
