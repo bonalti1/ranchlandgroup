@@ -22,7 +22,6 @@ export default function Footer() {
               {[
                 ["Ranches for Sale", "/listings"],
                 ["Our Story", "/about"],
-                ["The Outfitter", "/shop"],
                 ["Contact", "/contact"],
               ].map(([label, href]) => (
                 <li key={href}>

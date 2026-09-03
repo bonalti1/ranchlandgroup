@@ -11,7 +11,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/`, priority: 1 },
     { url: `${BASE}/listings`, priority: 0.9 },
     { url: `${BASE}/about`, priority: 0.6 },
-    { url: `${BASE}/shop`, priority: 0.5 },
     { url: `${BASE}/contact`, priority: 0.6 },
   ];
   const listingPages: MetadataRoute.Sitemap = listings.map((l) => ({

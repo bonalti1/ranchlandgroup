@@ -199,28 +199,16 @@ export default async function ListingPage({
             <div className="my-6">
               <InquiryForm subject={`Inquiry — ${listing.name}`} />
             </div>
-            <div className="border-t border-ink/10 pt-5 text-center text-sm text-ink/70">
-              {listing.agent ? (
-                <>
-                  Listing agent: {listing.agent.name} ·{" "}
-                  <a
-                    href={listing.agent.phoneHref}
-                    className="font-semibold text-saddle underline underline-offset-2"
-                  >
-                    {listing.agent.phone}
-                  </a>
-                </>
-              ) : (
-                <>
-                  Prefer to talk?{" "}
-                  <a
-                    href={site.phoneHref}
-                    className="font-semibold text-saddle underline underline-offset-2"
-                  >
-                    {site.phone}
-                  </a>
-                </>
-              )}
+            <a
+              href={listing.agent?.phoneHref ?? site.phoneHref}
+              className="block w-full border border-saddle px-8 py-4 text-center font-display text-sm tracking-[0.25em] text-saddle uppercase transition-colors hover:bg-saddle hover:text-cream"
+            >
+              Call {listing.agent?.phone ?? site.phone}
+            </a>
+            <div className="mt-6 border-t border-ink/10 pt-5 text-center text-sm text-ink/70">
+              {listing.agent
+                ? `Listing agent: ${listing.agent.name}`
+                : "Calls and texts welcome — seven days a week."}
             </div>
           </div>
         </Reveal>

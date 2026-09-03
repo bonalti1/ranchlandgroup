@@ -64,7 +64,7 @@ const milestones = [
   },
   {
     year: "The Brand",
-    text: "The buck emblem debuts — on signs, on gates, and on the gear in our Outfitter. A mark that stands for land done right.",
+    text: "The buck emblem debuts — on signs, on gates, and on the gear we wear. A mark that stands for land done right.",
   },
   {
     year: "What's Next",

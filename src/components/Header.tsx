@@ -4,12 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { LogoLockup } from "./Logo";
-import { useCart } from "./CartProvider";
 
 const nav = [
   { href: "/listings", label: "Ranches" },
   { href: "/about", label: "Our Story" },
-  { href: "/shop", label: "Outfitter" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -17,7 +15,6 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const { count, setDrawerOpen } = useCart();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 32);
@@ -65,33 +62,9 @@ export default function Header() {
               />
             </Link>
           ))}
-          <button
-            onClick={() => setDrawerOpen(true)}
-            className="eyebrow relative cursor-pointer opacity-75 transition-opacity hover:opacity-100"
-            aria-label="Open cart"
-          >
-            Cart
-            {count > 0 && (
-              <span className="absolute -top-2 -right-4 flex h-4 w-4 items-center justify-center rounded-full bg-saddle font-body text-[0.6rem] text-cream">
-                {count}
-              </span>
-            )}
-          </button>
         </nav>
 
         <div className="flex items-center gap-5 md:hidden">
-          <button
-            onClick={() => setDrawerOpen(true)}
-            className="eyebrow relative cursor-pointer"
-            aria-label="Open cart"
-          >
-            Cart
-            {count > 0 && (
-              <span className="absolute -top-2 -right-3 flex h-4 w-4 items-center justify-center rounded-full bg-saddle font-body text-[0.6rem] text-cream">
-                {count}
-              </span>
-            )}
-          </button>
           <button
             className="flex h-9 w-9 cursor-pointer flex-col items-center justify-center gap-1.5"
             onClick={() => setOpen(!open)}

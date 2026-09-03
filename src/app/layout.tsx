@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Cinzel, Lora } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import CartProvider from "@/components/CartProvider";
 import { site } from "@/data/site";
 import "./globals.css";
 
@@ -82,11 +81,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
-        <CartProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </CartProvider>
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
