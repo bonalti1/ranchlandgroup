@@ -22,16 +22,14 @@ export default function Home() {
           </Reveal>
           <Reveal delay={300}>
             <h1 className="mt-6 font-display text-4xl leading-tight tracking-wide text-balance sm:text-5xl md:text-6xl lg:text-7xl">
-              Legacy Land.
+              Own Your Piece
               <br />
-              Expertly Sold.
+              of Texas.
             </h1>
           </Reveal>
           <Reveal delay={450}>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-cream/80 md:text-xl">
-              Premier hunting ranches and recreational land across South Texas
-              — from the Golden Triangle to the Rio Grande — sold by people
-              who live this life.
+              Premier hunting and recreational land across South Texas.
             </p>
           </Reveal>
           <Reveal delay={600}>
@@ -156,13 +154,13 @@ export default function Home() {
           <Reveal>
             <BuckMark tone="brass" className="mx-auto h-16 w-16" />
             <h2 className="mt-8 font-display text-3xl leading-snug md:text-5xl">
-              Thinking About Buying
+              Looking for Your
               <br />
-              or Selling a Ranch?
+              Next Ranch?
             </h2>
             <p className="mt-6 text-lg text-cream/75">
               Start with a conversation. No pressure, no obligation — just
-              straight talk about your land and the market.
+              straight talk about the land and the market.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
