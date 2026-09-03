@@ -60,7 +60,7 @@ const milestones = [
   },
   {
     year: "The Team",
-    text: "Ranch Land Group comes together in South Texas — a team of land specialists, listing through a licensed REALTOR®, giving the region's legacy properties the marketing sophistication of a national brand with the boots-on-the-ground feel of a neighbor.",
+    text: "Ranch Land Group comes together in South Texas — a team of land specialists, listing through a licensed REALTOR®, selling the region's ranches the right way: walked, studied, and shown as they are.",
   },
   {
     year: "The Brand",
@@ -68,7 +68,7 @@ const milestones = [
   },
   {
     year: "What's Next",
-    text: "A growing team, a national buyer network, and a platform that will carry every part of the ranch business — from first showing to closing table.",
+    text: "A growing team, more ranches, and a better way to buy land in South Texas — from first showing to closing table.",
   },
 ];
 
