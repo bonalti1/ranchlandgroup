@@ -92,28 +92,20 @@ export default function AboutPage() {
       <section className="mx-auto max-w-3xl px-5 py-24 md:px-8">
         <Reveal>
           <p className="text-xl leading-relaxed text-ink/80 md:text-2xl md:leading-relaxed">
-            Ranch Land Group exists because the best ranches were being sold
-            like ordinary houses — a sign at the gate, a handful of photos,
-            and hope. We knew the land deserved better — so we built the
-            company we wished existed.
+            Ranch Land Group exists because great ranches were being sold
+            like ordinary houses. We knew the land deserved better — so we
+            built the company we wished existed.
           </p>
           <div className="rule my-10" />
           <div className="space-y-6 text-lg leading-relaxed text-ink/75">
             <p>
-              We come from construction and real estate — years of building
-              projects, moving dirt, and closing deals taught us how to size
-              up land with a builder&apos;s eye: the water, the access, the
-              soil, the true cost of every improvement. And a lifelong love
-              of hunting the South Texas brush taught us the rest — what
-              makes a ranch worth owning, and what makes it worth passing
-              down.
-            </p>
-            <p>
-              Today we pair those roots with the most modern marketing in the
-              business — professional photography, aerial mapping, and a
-              national network of qualified land buyers. Every listing is
-              walked and studied before it goes to market. Every buyer is
-              treated like a future neighbor, because out here, they are.
+              We come from construction and real estate, with a lifelong
+              love of hunting the South Texas brush. That mix taught us how
+              to size up land with a builder&apos;s eye — water, access,
+              soil — and to know what makes a ranch worth owning. Every
+              listing is walked and studied before it goes to market, and
+              every buyer is treated like a future neighbor. Out here, they
+              are.
             </p>
           </div>
         </Reveal>
