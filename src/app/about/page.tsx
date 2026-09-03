@@ -87,14 +87,14 @@ export default function AboutPage() {
             preload="metadata"
             className="absolute inset-0 h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink/45 via-ink/0 to-ink/85" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink/45 via-ink/10 to-ink/90" />
           <div className="grain absolute inset-0" />
         </div>
         <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pt-44 pb-16 md:px-8">
           <Reveal>
             <p className="eyebrow text-brass">Our Story</p>
             <h1 className="mt-4 max-w-3xl font-display text-4xl leading-tight md:text-6xl">
-              Born on the Land, Built for Its People
+              We Know This Land
             </h1>
           </Reveal>
         </div>

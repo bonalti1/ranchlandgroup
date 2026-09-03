@@ -123,9 +123,9 @@ export default function Home() {
         <Reveal delay={150}>
           <p className="eyebrow text-saddle">Our Story</p>
           <h2 className="mt-4 font-display text-3xl leading-snug md:text-5xl">
-            Born on the Land,
+            We Know
             <br />
-            Built for Its People
+            This Land
           </h2>
           <div className="rule my-8 max-w-xs" />
           <p className="text-lg leading-relaxed text-ink/75">
